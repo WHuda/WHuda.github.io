@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Subversion</title>
+    <script defer src="https://use.fontawesome.com/releases/v6.6.0/js/all.js"></script>
+</head>
+
+<body class="bg">
+    <header>
+        <section class="hero is-fullheight"
+            style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
+            <!-- navbar -->
+            <nav class="navbar is-soft is-fixed-top has-background-link">
+                <div class="navbar-brand">
+                    <a class="navbar-burger has-text-white" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="navbar-menu has-background-link" id="nav-links">
+                    <div class="navbar-start py-3 px-3">
+                        <h3 class="title is-size-1 has-text-primary-light">Control Tree</h3>
+                    </div>
+                    <div class="navbar-end px-3">
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="contacts"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </span>
+                            <span>Контактная информация</span>
+                        </a>
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>О нас</span>
+                        </a>
+                        <!-- Header-topic for mobile -->
+                        <div class="container is-hidden-desktop">
+                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-1">Определение</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-2">Возможности </a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-3">Архитектура</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-4">Компоненты</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-5">Как рабочие копии отслеживают хранилище</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-6">Источники</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Title -->
+            <div class="hero-body">
+                <div class="">
+                    <div class="containter pl-6">
+                        <p class="title is-size-1 has-text-primary-light">Subversion</p>
+                        <p class="subtitle is-primary-invert">подготовлено редакций сайта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- BreadCrumbs -->
+    <section class="section pb-0 changeWidth">
+        <div class="container">
+            <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html" class="has-text-info">Системы контроля версий</a></li>
+                    <li class="is-active"><a class="has-text-grey" href="#" aria-current="page">Subversion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- side bar for desks/tablets -->
+    <div class="is-widescreen is-hidden-touch is-desktop">
+        <aside class="menu" id="menu">
+            <div class="box has-background-link">
+                <p class="menu-label has-text-primary-light is-size-4">
+                    Содержание
+                </p>
+                <ul class="menu-list is-size-5">
+                    <li><a class="is-active" class="has-background-white" href="#Topic-1">Определение</a>
+                    </li>
+                    <li><a href="#Topic-2">Возможности</a></li>
+                    <li><a href="#Topic-3">Архитектура</a></li>
+                    <li><a href="#Topic-4">Компоненты</a></li>
+                    <li><a href="#Topic-5">Как рабочие копии отслеживают хранилище</a></li>
+                    <li><a href="#Topic-6">Источники</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Content -->
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-1">Subversion</h1>
+                <!-- Breadcrumb -->
+                <div class="box is-three-quarters has-background-link">
+                    <div class="subtitle is-justify-content-center is-flex p-5">
+                        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-solid fa-calendar-days"></i>
+                                        </span>
+                                        <span class="has-text-white">Дата создания 22.09.2024</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-regular fa-clock"></i></i>
+                                        </span>
+                                        <span class="has-text-white">5 мин. чтения</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="share">
+                                        <span class="icon is-small has-text-white"><i class="fa-solid fa-share"></i>
+                                        </span>
+                                        <span class="has-text-white">Поделиться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3 has-text-white ">
+                        <p>
+                            <a href="https://subversion.apache.org/" class="title has-text-primary-light">Subversion</a>
+                            — это
+                            бесплатная система управления версиями с открытым исходным кодом. Subversion позволяет
+                            управлять файлами и каталогами, а так же сделанными в них изменениями во времени. Это
+                            позволяет восстановить более ранние версии данных, даёт возможность изучить историю всех
+                            изменений.
+                        </p>
+                    </div>
+
+
+                    <div class="content px-3 has-text-white">
+                        <p>
+                            Subversion может работать через сеть, что позволяет использовать её на разных
+                            компьютерах. В
+                            какой то степени, возможность большого количества людей не зависимо от их местоположения
+                            совместно работать над единым комплектом данных поощряет сотрудничество. Когда нет того
+                            ответственного звена цепи, того контролирующего элемента, который утверждает все
+                            изменения,
+                            работа становится более эффективной. При этом не нужно опасаться, что отказ от
+                            контролирующего элемента повлияет на качество, ведь благодаря сохранению истории
+                            изменений,
+                            даже если при изменении данных будут допущены ошибки, всегда можно сделать откат
+                            изменений к
+                            прежнему состоянию.
+                        </p>
+                    </div>
+                    <p class="px-3 has-text-white">
+                        Некоторые системы управления версиями выступают также в качестве систем управления
+                        конфигурацией
+                        программного обеспечения. Такие системы специально созданы для управления деревьями
+                        исходного кода и имеют множество особенностей, непосредственно относящихся к разработке
+                        программ: они понимают языки программирования и предоставляют инструменты для сборки
+                        программ.
+                        Subversion не является такой системой, она представляет собой систему общего назначения,
+                        которую
+                        можно использовать для управления любым набором файлов. Для Вас это будут исходники
+                        Ваших
+                        программ, а для кого-то другого это будет список продуктов или сведённое цифровое видео.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue2.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-2">Возможности в
+                        Subversion</h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-size-6-mobile is-size-4-desktop">
+                        <div class="content has-text-white has-text-white has-text-justified">
+                            <p>
+                                Subversion предоставляет следующие возможности:
+                            </p>
+                            <div class="content pt-5">
+                                <div><strong class="has-text-primary-light">Контроль изменений
+                                        каталогов</strong></div>
+                                <ul>
+                                    <li>CVS следит только за историей отдельных файлов, тогда как Subversion использует
+                                        «виртуальную» файловую систему с возможностями управления версиями, которая
+                                        способна
+                                        отслеживать изменения во времени целых структур каталогов. Под управление
+                                        версиями
+                                        попадают и файлы, и каталоги.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column is-size-6-mobile is-size-4-desktop">
+                    <div class="content has-text-white">
+                        <div class="content pt-5 has-text-white has-text-justified">
+                            <div><strong class="has-text-primary-light">Настоящая история
+                                    версий</strong></div>
+                            <ul>
+                                <li>CVS контролирует лишь изменения файлов, поэтому такие операции, как копирование
+                                    и
+                                    переименование, хотя и относящиеся к файлам, но по существу являющиеся
+                                    изменениями
+                                    каталогов, содержащих эти файлы, в CVS не поддерживаются. Кроме того, в CVS вы
+                                    не
+                                    можете заменить файл, помещённый под управление версиями, другим файлом с тем же
+                                    именем, но совершенно иным содержанием, возможно никак не связанным со старым
+                                    объектом, без наследования таким элементом всей истории изменений. Subversion
+                                    делает
+                                    возможным добавление, удаление, копирование и переименование как файлов, так и
+                                    каталогов. При этом каждый вновь добавленный файл начинает жизнь с чистого
+                                    листа,
+                                    сохраняя</li>
+                            </ul>
+                            <div><strong class="has-text-primary-light">Атомарная фиксация
+                                    изменений</strong></div>
+                            <ul>
+                                <li>Каждый набор изменений либо попадает в хранилище целиком, либо не попадает туда
+                                    вовсе. Это позволяет разработчикам создавать и фиксировать изменения логически
+                                    оправданными кусками, предотвращая тем самым проблемы, которые могут возникать в тех
+                                    случаях, когда только часть необходимых изменений помещается в хранилище успешно.
+                                </li>
+                            </ul>
+                            <div><strong class="has-text-primary-light">Метаданные с версиями</strong>
+                            </div>
+                            <ul>
+                                <li>Каждый файл и каталог имеет собственный набор свойств, представленных в виде
+                                    названия и значения. Вы можете создавать и сохранять любые необходимые пары названий
+                                    свойств и их значений. Свойства файлов точно так же находятся под управлением
+                                    версиями, как и их содержимое.
+                                </li>
+                            </ul>
+                            <div><strong class="has-text-primary-light">Выбор средств доступа к
+                                    хранилищу по сети</strong></div>
+                            <ul>
+                                <li>В Subversion используется абстракция доступа к хранилищу, что позволяет
+                                    реализовывать самые разные сетевые механизмы доступа. Subversion может быть
+                                    подключена к серверу HTTP Apache в виде модуля, что даёт ей огромное преимущество с
+                                    точки зрения устойчивости работы и способности к взаимодействию, а также
+                                    предоставляет прямой доступ к существующим возможностям этого сервера, включая
+                                    установление личности, проверку прав доступа и сжатие информации при передаче. Кроме
+                                    того, имеется лёгкий самостоятельный сервер Subversion, который использует
+                                    собственный протокол взаимодействия с клиентами и может легко туннелировать данные
+                                    через SSH.
+                                </li>
+                            </ul>
+                            <div><strong class="has-text-primary-light">Единый способ работы с
+                                    данными</strong></div>
+                            <ul>
+                                <li>Subversion обнаруживает различия между файлами с помощью специального бинарного
+                                    алгоритма, который одинаково работает как с текстовыми, так и с бинарными файлами.
+                                    Файлы записываются в хранилище в сжатом виде независимо от их типа, а различия между
+                                    отдельными версиями могут передаваться по сети в обоих направлениях.
+                                </li>
+                            </ul>
+                            <div><strong class="has-text-primary-light">Эффективные ветки и
+                                    метки</strong></div>
+                            <ul>
+                                <li>Плата за использование веток и меток не должна быть пропорциональна размеру проекта.
+                                    Subversion создаёт ветки и метки путём простого копирования проекта, используя
+                                    механизм, похожий на жёсткие ссылки в файловых системах. Благодаря этому, операции
+                                    по созданию веток и меток занимают немного времени.
+                                </li>
+                            </ul>
+                            <div><strong class="has-text-primary-light">Дружелюбность по отношению к
+                                    разработчикам</strong></div>
+                            <ul>
+                                <li>Subversion не имеет исторического багажа. Она реализована в виде набора динамических
+                                    библиотек на языке C, API которых хорошо известен. Это делает Subversion чрезвычайно
+                                    удобной для сопровождения системой, пригодной для взаимодействия с другими
+                                    приложениями и языками программирования.
+                                </li>
+                            </ul>
+                            <div><strong class="has-text-primary-light">Краткий туториал для
+                                    старта работы в subversion</strong></div>
+                            <section class="section pt-0">
+                                <section class="section pt-0">
+                                    <figure class="image is-16by9">
+                                        <iframe class="has-ratio" width="640" height="360"
+                                            src="https://rutube.ru/play/embed/4921a328132d6fdf902c7883527b887c/"
+                                            frameborder="0" allowfullscreen>
+                                        </iframe>
+                                    </figure>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue2.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container ml-auto px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-3">Архитектура
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-size-6-mobile is-size-4-desktop">
+                        <div class="content px-3 has-text-white has-text-justified">
+                            <p>
+                                На одной стороне схемы изображено хранилище Subversion, в котором хранится информация с
+                                версиями. На противоположной стороне показана программа-клиент Subversion, которая
+                                управляет
+                                локальными отражениями различных фрагментов этих данных (также называемыми «рабочими
+                                копиями»). Между этими сторонами проложены различные маршруты, проходящие через разные
+                                слои
+                                доступа к хранилищу[7]. Некоторые из этих маршрутов используют компьютерные сети и
+                                сетевые
+                                сервера, чтобы достичь хранилища, в то время как другие маршруты в сети не нуждаются и
+                                ведут
+                                к хранилищу напрямую.
+                            </p>
+                            <div class="has-background-white">
+                                <figure class="image is-2by1 mt-3">
+                                    <img src="assets/subversion-image.png" alt="programmers">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-4">Компоненты</h1>
+            </div>
+            <div class="columns">
+                <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3 has-text-white">
+                        <p>
+                            Установленная Subversion имеет несколько компонентов. Ниже приводится краткий обзор
+                            того,
+                            что вы получаете. Не тревожьтесь, если краткие описания заставляют вас чесать затылок, в
+                            этой книге есть еще много страниц, посвященных облегчению вашего замешательства.
+                        </p>
+                        <div class="content">
+                            <ul>
+                                <li><strong class="has-text-primary-light">svn</strong>: Клиент с интерфейсом
+                                    командной
+                                    строки.</li>
+                                <li><strong class="has-text-primary-light">svnversion</strong>: Программа,
+                                    показывающая
+                                    состояние (в пределах ревизий существующих элементов) рабочей копии.</li>
+                                <li><strong class="has-text-primary-light">svnlook</strong>: Инструмент прямого
+                                    управления хранилищем Subversion.</li>
+                                <li><strong class="has-text-primary-light">svnadmin</strong>: Инструмент для
+                                    создания,
+                                    настройки или восстановления хранилища Subversion.</li>
+                                <li><strong class="has-text-primary-light">svndumpfilter</strong>: Программа для
+                                    фильтрации дамповых потоков хранилища Subversion.</li>
+                                <li><strong class="has-text-primary-light">mod_dav_svn</strong>: Подключаемый модуль
+                                    для
+                                    HTTP-сервера Apache, использующийся для предоставления сетевого доступа к вашему
+                                    хранилищу.</li>
+                                <li><strong class="has-text-primary-light">svnserve</strong>: Собственный отдельный
+                                    сервер, запускаемый как процесс-демон и доступный посредством SSH; еще один
+                                    способ
+                                    для предоставления сетевого доступа к хранилищу.</li>
+                                <li><strong class="has-text-primary-light">svnsync</strong>: Программа для
+                                    последовательного зеркалирования одного хранилища в другое через сеть.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-5">Как рабочие копии
+                    отслеживают хранилище<h1>
+            </div>
+            <div class="columns">
+                <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3 has-text-white">
+                        <p>
+                            В служебной папке .svn/ для каждого файла рабочей папки Subversion записывает информацию
+                            о
+                            двух важнейших свойствах:
+                        </p>
+                        <div class="content">
+                            <ul>
+                                <li>На какой ревизии основан ваш рабочий файл (это называется рабочая ревизия файла)
+                                </li>
+                                <li>Дату и время, когда локальная копия последний раз обновлялась из хранилища.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            Основываясь на этой информации, и взаимодействуя с хранилищем, Subversion может сказать,
+                            в
+                            каком из следующих четырех состояний находится рабочий файл:
+                        </p>
+                        <div class="content">
+                            <ul>
+                                <li><strong class="has-text-primary-light">Не изменялся и не устарел. </strong>Файл
+                                    не
+                                    изменялся в рабочей папке, и в хранилище не фиксировались изменения этого файла
+                                    со
+                                    времени его рабочей ревизии. Команды фиксировать (commit) и обновить (update)
+                                    ничего
+                                    делать не будут.</li>
+                                <li><strong class="has-text-primary-light">Изменён локально и не устарел.
+                                    </strong>Файл
+                                    был изменён в рабочей папке, и в хранилище не фиксировались изменения этого
+                                    файла со
+                                    времени его базовой ревизии. Существующие локальные изменения не были
+                                    зафиксированы
+                                    в хранилище, поэтому команда фиксировать (commit) для файла преуспеет в
+                                    опубликовании ваших изменений, а команда обновить (update) ничего делать не
+                                    будет.
+                                </li>
+                                <li><strong class="has-text-primary-light">Не изменялся и устарел. </strong>Файл в
+                                    рабочей
+                                    папке не изменялся, но был изменён в хранилище. Со временем, файл должен быть
+                                    обновлён для соответствия текущей публичной ревизии. Команда фиксировать
+                                    (commit)
+                                    ничего делать не будет, а команда обновить (update) внесёт последние изменения в
+                                    вашу рабочую копию.
+                                </li>
+                                <li><strong class="has-text-primary-light">Изменён локально и устарел. </strong>Файл
+                                    был
+                                    изменён как в рабочей папке, так и в хранилище. Команда фиксировать (commit)
+                                    потерпит неудачу с ошибкой устарел (out-of-date). Файл необходимо сначала
+                                    обновить;
+                                    команда обновить (update) попытается объединить опубликованные изменения с
+                                    локальными. Если Subversion не сможет выполнить объединение в приемлемой форме
+                                    самостоятельно, то заботу о разрешении конфликта она оставит пользователю.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-6">Источники</h1>
+                </div>
+                <!-- cards -->
+                <section class="section">
+                    <div class="container">
+                        <div class="columns is-centered is-8 is-variable is-multiline">
+                            <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
+                                <div class="card bg1 has-background-link">
+                                    <div class="card-content">
+                                        <ol class="ml-5 has-text-white">
+                                            <li><a class="has-text-white"
+                                                    href="https://subversion.apache.org/">Официальный сайт
+                                                    Subversion</a><br></li>
+                                            <li><a class="has-text-white"
+                                                    href="https://svnbook.red-bean.com/ru/1.4/svn.intro.whatis.html">Что
+                                                    такое Subversion?</a><br></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pagination -->
+                <section class="section">
+                    <div class="container" style="top: 50px;">
+                        <div class="box paginationStyle">
+                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                                <a href="git-tutorial.html" class="pagination-previous">Назад</a>
+                                <a href="subversion-tutorial.html" class="pagination-next">Вперед</a>
+                                <ul class="pagination-list">
+                                    <li><a href="index.html" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="git-tutorial.html" class="pagination-link"
+                                            aria-label="Goto page 45">3</a>
+                                    </li>
+                                    <li><a href="#" class="pagination-link is-current" aria-label="Goto page 47">4</a>
+                                    <li><a href="subversion-tutorial.html" class="pagination-link"
+                                            aria-label="Goto page 47">5</a>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="comparison.html" class="pagination-link"
+                                            aria-label="Goto page 45">8</a>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="modal-1">
+        <div class="modal-background" id="contact-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">Контактная информация</h3>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Владелец: Широков Глеб Вадимович
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Прямой городской номер +8932342444
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Телефон по все России +89425255252
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="modal-2">
+        <div class="modal-background" id="about-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">О нас</h3>
+            <p class="is-size-4 has-text-white">Данный сайт был создан с целью публикации информации на различные темы.
+                Здесь вы можете
+                найти полезные
+                статьи, советы и рекомендации по самым разнообразным вопросам. Наша цель - делиться знаниями и помогать
+                посетителям узнавать новое и интересное. Благодарим вас за посещение сайта и надеемся, что вы найдете
+                здесь то, что вас заинтересует!</p>
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
+
+    <!-- Footer -->
+    <footer class="footer has-background-link">
+        <div class="content has-text-centered">
+            <section class="section changeWidth">
+                <div class="container">
+                    <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права защищены.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

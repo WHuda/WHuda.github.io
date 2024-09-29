@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Системы контроля версий</title>
+    <script defer src="https://use.fontawesome.com/releases/v6.6.0/js/all.js"></script>
+</head>
+
+<body class="bg">
+    <header>
+        <section class="hero is-fullheight"
+            style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
+            <nav class="navbar is-soft is-fixed-top has-background-link">
+                <div class="navbar-brand">
+
+                    <a class="navbar-burger has-text-white" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu has-background-link" id="nav-links">
+                    <div class="navbar-start py-3 px-3">
+                        <h3 class="title is-size-1 has-text-primary-light">Control Tree</h3>
+                    </div>
+                    <div class="navbar-end px-3">
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="contacts"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </span>
+                            <span>Контактная информация</span>
+                        </a>
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>О нас</span>
+                        </a>
+                        <!-- Header-topic for mobile -->
+                        <div class="container is-hidden-desktop">
+                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-1">GIT и для чего он нужен</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-2">Преимущества</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-3">Источники</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Title -->
+            <div class="hero-body">
+                <div class="">
+                    <div class="containter pl-6">
+                        <p class="title is-size-1 has-text-primary-light">Системы контроля версий</p>
+                        <p class="subtitle is-primary-invert">подготовлено редакций сайта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- side bar for desks/tablets -->
+    <div class="is-widescreen is-hidden-touch is-desktop has-background-link">
+        <aside class="menu" id="menu">
+            <div class="box has-background-link">
+                <p class="menu-label has-text-primary-light is-size-4">
+                    Содержание
+                </p>
+                <ul class="menu-list is-size-5">
+                    <li><a class="is-active" href="#Topic-1">GIT и для чего он нужен </a>
+                    </li>
+                    <li><a href="#Topic-2">Преимущества</a></li>
+                    <li><a href="#Topic-3">Источники</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Content -->
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-1">GIT и для чего он
+                    нужен
+                </h1>
+                <!-- Breadcrumb -->
+                <div class="box is-three-quarters has-background-link">
+                    <div class="subtitle is-justify-content-center is-flex p-5">
+                        <nav class="breadcrumb has-bullet-separator is-inline-block" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-solid fa-calendar-days"></i>
+                                        </span>
+                                        <span class="has-text-white">Дата создания 23.09.2024</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-regular fa-clock"></i></i>
+                                        </span>
+                                        <span class="has-text-white">5 мин. чтения</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="share">
+                                        <span class="icon is-small has-text-white"><i class="fa-solid fa-share"></i>
+                                        </span>
+                                        <span class="has-text-white">Поделиться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="content px-3">
+                        <p class="is-size-4 is-size-6-mobile has-text-white has-text-justified">
+                            Системы контроля версий — это программные инструменты, помогающие командам разработчиков
+                            управлять
+                            изменениями в
+                            исходном коде с течением времени. В свете усложнения сред разработки они помогают
+                            командам
+                            разработчиков
+                            работать быстрее и эффективнее. Системы контроля версий наиболее полезны командам
+                            DevOps,
+                            поскольку
+                            помогают
+                            сократить время разработки и увеличить количество успешных развертываний.
+
+                            Программное обеспечение контроля версий отслеживает все вносимые в код изменения в
+                            специальной
+                            базе
+                            данных.
+                            При
+                            обнаружении ошибки разработчики могут вернуться назад и выполнить сравнение с более
+                            ранними
+                            версиями
+                            кода
+                            для
+                            исправления ошибк, сводя к минимуму проблемы для всех участников команды.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue2.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-2">Преимущества
+                        систем контроля
+                        версий</h1>
+                </div>
+                <div class="columns">
+                    <div class="column py-6">
+                        <div class="content is-size-5 px-3">
+                            <p class="is-size-4 is-size-6-mobile has-text-white has-text-justified">
+                                Программное обеспечение контроля версий рекомендуется для продуктивных команд
+                                разработчиков
+                                и
+                                команд DevOps. Управление версиями помогает отдельным разработчикам работать
+                                быстрее, а
+                                командам
+                                по разработке ПО — сохранять эффективность и гибкость по мере увеличения числа
+                                разработчиков.
+                            </p>
+                            <figure class="image is-2by1">
+                                <img src="assets/programmers-image.jpg" alt="programmers">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="columns">
+                <div class="column py-6">
+                    <div class="content is-size-5 px-3">
+                        <p class="is-size-4 is-size-6-mobile has-text-white has-text-justified">
+                            За последние несколько десятилетий системы контроля версий (Version Control Systems, VCS)
+                            стали гораздо более совершенными в своих возможностях и функционале. Некоторым разработчикам
+                            удается опережать других в создании и внедрении инновационных функций, делающих работу с
+                            кодом более удобной и эффективной. В узком кругу специалистов системы VCS могут быть
+                            известны также как инструменты SCM (управление исходным кодом) или RCS (система управления
+                            редакциями). Среди широкого спектра инструментов для контроля версий, выделяется один из
+                            самых популярных и востребованных - Git. Git относится к категории распределенных систем
+                            контроля версий, известных как DVCS (распределенные VCS), что придает ему ряд особых
+                            преимуществ перед централизованными системами. Не стоит забывать, что Git, так же как многие
+                            другие популярные инструменты VCS, предоставляется бесплатно и с открытым исходным кодом,
+                            что позволяет разработчикам по всему миру свободно использовать и улучшать программное
+                            обеспечение. Независимо от того, какую систему контроля версий вы выбираете для своего
+                            проекта и как она называется, важно понимать, что их основное преимущество заключается в
+                            способности эффективно управлять изменениями в коде, обеспечивая рабочий процесс разработки
+                            более безопасным и организованным.
+                        </p>
+                    </div>
+                    <div class="content is-size-5 px-3">
+                        <p class="is-size-4 is-size-6-mobile has-text-white  has-text-justified">
+                            1. Полная история изменений каждого файла за длительный период. Это касается всех
+                            изменений,
+                            внесенных огромным количеством людей за долгие годы. Изменением считается создание и
+                            удаление
+                            файлов, а также редактирование их содержимого. Различные инструменты VCS отличаются
+                            тем,
+                            насколько хорошо они обрабатывают операции переименования и перемещения файлов. В
+                            историю
+                            также
+                            должны входить сведения об авторе, дата и комментарий с описанием цели каждого
+                            изменения.
+                            Наличие полной истории позволяет возвращаться к предыдущим версиям, чтобы проводить
+                            анализ
+                            основных причин возникновения ошибок и устранять проблемы в старых версиях
+                            программного
+                            обеспечения. Если над программным обеспечением ведется активная работа, то «старой
+                            версией»
+                            можно считать почти весь код этого ПО.
+                        </p>
+                    </div>
+                    <figure class="image is-3by2">
+                        <img src="assets/taskboard.jpg" alt="programmers">
+                    </figure>
+                    <div class="content is-size-5 px-3 pt-5">
+                        <p class="is-size-4 is-size-6-mobile has-text-white has-text-justified">
+                            2. Ветвление и слияние. Эти возможности полезны не только при одновременной работе
+                            участников
+                            команды: отдельные сотрудники также могут пользоваться ими, занимаясь несколькими
+                            независимыми
+                            направлениями. Создание «веток» в инструментах VCS позволяет иметь несколько
+                            независимых
+                            друг от
+                            друга направлений разработки, а также выполнять их слияние, чтобы инженеры могли
+                            проверить,
+                            что
+                            изменения, внесенные в каждую из веток, не конфликтуют друг с другом. Многие команды
+                            разработчиков ПО создают отдельные ветки для каждой функциональной возможности, для
+                            каждого
+                            релиза либо и для того, и для другого. Имея множество различных рабочих процессов,
+                            команды
+                            могут
+                            выбирать подходящий для них способ ветвления и слияния в VCS.
+                        </p>
+                    </div>
+                    <div class="content is-size-5 px-3">
+                        <p class="is-size-4 is-size-6-mobile has-text-white has-text-justified">
+                            3. Отслеживаемость. Возможность отслеживать каждое изменение, внесенное в
+                            программное
+                            обеспечение, и связывать его с ПО для управления проектами и отслеживания багов,
+                            например
+                            Jira,
+                            а также оставлять к каждому изменению комментарий с описанием цели и назначения
+                            изменения
+                            может
+                            помочь не только при анализе основных причин возникновения ошибок, но и при других
+                            операциях
+                            по
+                            исследованию. История с комментариями во время чтения кода помогает понять, для чего
+                            этот
+                            код
+                            нужен и почему он структурирован именно так. Благодаря этому разработчики могут
+                            вносить
+                            корректные и совместимые изменения в соответствии с долгосрочным планом разработки
+                            системы.
+                            Это
+                            особенно важно для эффективной работы с унаследованным кодом, поскольку дает
+                            специалистам
+                            возможность точнее оценить объем дальнейших задач.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth pt-5">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-3">Источники
+                    </h1>
+                </div>
+                <!-- cards -->
+                <section class="section">
+                    <div class="container">
+                        <div class="columns is-centered is-8 is-variable is-multiline">
+                            <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
+                                <div class="card has-background-link">
+                                    <div class="card-content has-text-white">
+                                        <ol class="ml-5">
+                                            <li><a class="has-text-white"
+                                                    href="https://www.atlassian.com/ru/git/tutorials/what-is-version-control">
+                                                    Что такое контроль версий?</a><br></li>
+                                            <li><a class="has-text-white"
+                                                    href="https://habr.com/ru/articles/552872/">Что такое VCS (система
+                                                    контроля версий)</a><br></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pagination -->
+                <section class="section">
+                    <div class="container">
+                        <div class="box paginationStyle">
+                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                                <a href="#" class="pagination-previous">Назад</a>
+                                <a href="git.html" class="pagination-next">Вперед</a>
+                                <ul class="pagination-list">
+                                    <li><a href="#" class="pagination-link is-current" aria-label="Goto page 47">1</a>
+                                    <li><a href="git.html" class="pagination-link" aria-label="Goto page 47">2</a>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="comparison.html" class="pagination-link"
+                                            aria-label="Goto page 45">8</a>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="modal-1">
+        <div class="modal-background" id="contact-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">Контактная информация</h3>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Владелец: Широков Глеб Вадимович
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Прямой городской номер +8932342444
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Телефон по все России +89425255252
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="modal-2">
+        <div class="modal-background" id="about-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">О нас</h3>
+            <p class="is-size-5">Данный сайт был создан с целью публикации информации на различные темы. Здесь вы можете
+                найти полезные
+                статьи, советы и рекомендации по самым разнообразным вопросам. Наша цель - делиться знаниями и помогать
+                посетителям узнавать новое и интересное. Благодарим вас за посещение сайта и надеемся, что вы найдете
+                здесь то, что вас заинтересует!</p>
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
+
+    <!-- Footer -->
+    <footer class="footer has-background-link">
+        <div class="content has-text-centered">
+            <section class="section changeWidth">
+                <div class="container ">
+                    <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права защищены.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

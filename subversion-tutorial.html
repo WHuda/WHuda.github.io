@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Subversion-tutorial</title>
+    <script defer src="https://use.fontawesome.com/releases/v6.6.0/js/all.js"></script>
+</head>
+
+<body class="bg">
+    <header>
+        <section class="hero is-fullheight"
+            style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
+            <!-- navbar -->
+            <nav class="navbar is-soft is-fixed-top has-background-link">
+                <div class="navbar-brand">
+                    <a class="navbar-burger has-text-white" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="navbar-menu has-background-link" id="nav-links">
+                    <div class="navbar-start py-3 px-3">
+                        <h3 class="title is-size-1 has-text-primary-light">Control Tree</h3>
+                    </div>
+                    <div class="navbar-end px-3">
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="contacts"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </span>
+                            <span>Контактная информация</span>
+                        </a>
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>О нас</span>
+                        </a>
+                        <!-- Header-topic for mobile -->
+                        <div class="container is-hidden-desktop">
+                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-1">Установка</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-2">Терминология</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-3">Основные задачи</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-4">Настройка локального репозитория</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-5">Рабочие копии</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-6">Источники</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Title -->
+            <div class="hero-body">
+                <div class="">
+                    <div class="containter pl-6">
+                        <p class="title is-size-1 has-text-primary-light">Apache Subversion: быстрый старт</p>
+                        <p class="subtitle is-primary-invert">подготовлено редакций сайта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- BreadCrumbs -->
+    <section class="section pb-0 changeWidth">
+        <div class="container">
+            <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html" class="has-text-info">Системы контроля версий</a></li>
+                    <li><a href="subversion.html" class="has-text-info">Subversion</a></li>
+                    <li class="is-active"><a class="has-text-grey" href="#" aria-current="page">Subversion-быстрый
+                            старт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- side bar for desks/tablets -->
+    <div class="is-widescreen is-hidden-touch is-desktop bg1">
+        <aside class="menu" id="menu">
+            <div class="box has-background-link">
+                <p class="menu-label has-text-primary-light is-size-4">
+                    Содержание
+                </p>
+                <ul class="menu-list is-size-5">
+                    <li><a class="is-active is-primary" class="has-background-white" href="#Topic-1">Установка</a>
+                    </li>
+                    <li><a href="#Topic-2">Терминология</a></li>
+                    <li><a href="#Topic-3">Основные задачи</a></li>
+                    <li><a href="#Topic-4">Настройка локального репозитория</a></li>
+                    <li><a href="#Topic-5">Рабочие копии</a></li>
+                    <li><a href="#Topic-6">Источники</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-1">Установка SVN-клиента
+                </h1>
+                <!-- Breadcrumb -->
+                <div class="box is-three-quarters has-background-link">
+                    <div class="subtitle is-justify-content-center is-flex p-5">
+                        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-solid fa-calendar-days"></i>
+                                        </span>
+                                        <span class="has-text-white">Дата создания 23.09.2024</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-regular fa-clock"></i></i>
+                                        </span>
+                                        <span class="has-text-white">5 мин. чтения</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="share">
+                                        <span class="icon is-small has-text-white"><i class="fa-solid fa-share"></i>
+                                        </span>
+                                        <span class="has-text-white">Поделиться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Systems cards -->
+            <section class="section">
+                <div class="container">
+                    <div class="columns is-centered is-8 is-variable is-multiline">
+                        <div class="column">
+                            <div class="card has-text-white cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-linux"></i>
+                                        </span>
+                                        <span>Linux</span>
+                                    </p>
+                                    <p class="is-size-5 has-text-centered has-text-white">
+                                        apt-get install subversion
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://subversion.apache.org/packages.html"
+                                        class="card-footer-item has-text-white">Официальный сайт</a>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="column ">
+                            <div class="card has-text-white cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-apple"></i>
+                                        </span>
+                                        <span>Mac</span>
+                                    </p>
+                                    <p class="is-size-5 has-text-centered has-text-white">
+                                        brew options subversion
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://subversion.apache.org/packages.html"
+                                        class="card-footer-item has-text-white">Официальный сайт</a>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="column ">
+                            <div class="card has-text-white cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-windows"></i>
+                                        </span>
+                                        <span>Windows</span>
+                                    </p>
+                                    <p class="is-size-5 has-text-centered has-text-white">
+                                        Скачивание с сайта
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://subversion.apache.org/packages.html"
+                                        class="card-footer-item has-text-white">Официальный сайт</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <p class="pb-5 px-3">
+                        Установите клиент SVN , чтобы начать совместную работу над проектом, использующим Subversion
+                        в качестве системы контроля версий. Чтобы установить клиентскую программу, вы можете собрать
+                        ее самостоятельно из исходного кода
+                        или загрузить бинарный пакет. Список сайтов, где вы можете получить готовый клиент
+                        Subversion, доступен на официальной странице бинарных пакетов . Если вы хотите
+                        скомпилировать программное обеспечение самостоятельно, возьмите исходный код на странице
+                        Исходный код . Сразу после установки клиента вы сможете протестировать его, выполнив команду
+                        svn. Вы должны
+                        увидеть следующий вывод:
+                    </p>
+                    <div class="box has-background-link has-text-white">
+                        $ svn<br>
+                        Type 'svn help' for usage.
+                    </div>
+                    <p class="pb-5 px-3">
+                        Теперь вы можете начать использовать клиент командной строки для взаимодействия с удаленным
+                        репозиторием.
+                    </p>
+                    <div class="notification is-warning">
+                        Если у вас возникнут какие-то трудности с Subversion, вам может быть лучше подойдет
+                        графический клиент. Мы не
+                        ведем список таких клиентов; вместо этого мы рекомендуем вам выполнить веб-поиск Subversion
+                        GUI client.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-2">Терминология</h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <p class="px-3">
+                            Репозиторий — это база данных управления версиями, которая часто находится на сервере и
+                            обычно предоставляется либо Apache HTTP Server (через модуль mod_dav_svn ), либо сервером
+                            svnserve. Репозиторий действует как единый источник истины и — как центральное хранилище —
+                            содержит полную историю изменений версионных данных в виде ревизий.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content pt-5 is-size-6-mobile is-size-4-desktop px-3">
+                        <div><strong class="has-text-primary-light">Примеры URL-адресов
+                                репозитория:</strong></div>
+                        <ul>
+                            <li>HTTP-сервер Apache: https://svn.example.com/
+                                repos/MyRepo/MyProject/trunk</li>
+                        </ul>
+
+                        <ul>
+                            <li>svnserve: svn://svn.example.com/
+                                repos/MyRepo/MyProject/
+                                branches/MyBranch</li>
+                        </ul>
+                        <ul>
+                            <li>Прямой доступ (в стиле Unix): file:///var/svn/repos
+                                /MyRepo/MyProject/tags/1.1.0</li>
+                        </ul>
+                        <ul>
+                            <li>Прямой доступ (в стиле Windows): file:///C:/Repositories/
+                                MyRepo/trunk/
+                                MyProject</li>
+                        </ul>
+                    </div>
+                    <div class="content px-3">
+                        <div><strong class="has-text-primary-light">Что такое рабочая
+                                копия?</strong></div>
+                        <p>
+                            Рабочая копия — это ваше локальное и личное рабочее пространство, которое вы используете
+                            для взаимодействия с центральным репозиторием Subversion. Вы используете рабочую копию
+                            для изменения содержимого вашего проекта и получения изменений, зафиксированных
+                            другими.<br><br>
+                        </p>
+                    </div>
+                    <div class="content is-size-5 px-3 is-size-6-mobile is-size-4-desktop">
+                        <p>
+                            Рабочая копия содержит данные вашего проекта и выглядит и действует как обычный каталог
+                            в вашей локальной файловой системе, но с одним важным отличием — рабочая копия
+                            отслеживает статус и изменения файлов и каталогов внутри. Вы можете думать о рабочей
+                            копии как об обычном каталоге с возможностями управления версиями. Рабочая копия имеет
+                            административный каталог с именем .svn в своем корне. Административный каталог содержит
+                            метаданные, необходимые Subversion для управления возможностями управления версиями.
+                            <br><br>
+                            Из одного и того же репозитория или проекта может быть столько рабочих копий, сколько
+                            вам нужно, с любой комбинацией локальных изменений.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-3">Основные задачи
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content pt-5 px-3">
+                            <div><strong class="has-text-primary-light">Импорт данных в
+                                    репозиторий</strong></div>
+                            <p>
+                                Если вы хотите импортировать существующие неверсионные данные в репозиторий SVN, вам
+                                следует
+                                выполнить команду svn import . Вот пример:
+                            </p>
+                            <div class="box has-background-link has-text-white">
+                                $ svn<br>
+                                Type 'svn help' for usage.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content pt-5 px-3">
+                        <div><strong class="has-text-primary-light">Проверка рабочей
+                                копии</strong></div>
+                        <p>
+                            Чтобы начать вносить изменения в данные вашего проекта, вам нужно создать локальную
+                            копию версионированного проекта. Вы можете использовать клиент командной строки svn или
+                            любой клиент на основе графического интерфейса, который вы предпочитаете. Ваша локальная
+                            копия проекта называется рабочей копией, и вы создаете ее, выполнив команду svn checkout
+                            . Вот пример:
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            $ svn checkout https://svn.example.com/
+                            repos/MyRepo/MyProject/
+                            trunk MyWorkingCopy
+                        </div>
+                    </div>
+                    <div class="content pt-5 px-3">
+                        <p>
+                            В результате вы получите рабочую копию ствола проекта с именем MyProject, который
+                            находится
+                            в репозитории MyRepo. Рабочая копия будет расположена в каталоге MyWorkingCopy на вашем
+                            компьютере. Обратите внимание, что вместо того, чтобы выписывать ствол, вы можете
+                            выписывать
+                            некоторую ветку или тег (предполагая, что они уже существуют в репозитории).
+                        </p>
+                        <p>
+                            Вы также можете получить рабочую копию всего репозитория MyRepo. Но вам следует
+                            воздержаться от этого. Вообще говоря, вам не нужно иметь рабочую копию всего репозитория
+                            для вашей работы, потому что ваша рабочая копия может быть мгновенно переключена на
+                            другую ветку разработки. Более того, репозиторий Subversion может содержать ряд не
+                            связанных между собой проектов, и лучше иметь выделенную рабочую копию для каждого из
+                            них, а не одну рабочую копию для всех проектов.
+                        </p>
+                    </div>
+                    <div class="content pt-5 px-3">
+                        <div><strong class="has-text-primary-light">Обновление рабочей
+                                копии</strong></div>
+                        <p>
+                            Вы не единственный человек, работающий над проектом, верно? Это значит, что ваши коллеги
+                            также вносят изменения в данные проекта. Чтобы оставаться в курсе и получать изменения,
+                            внесенные другими, вам следует запустить команду svn update в вашей рабочей копии. В
+                            результате ваша рабочая копия синхронизируется с репозиторием и загрузит изменения,
+                            внесенные вашими коллегами. Рекомендуется обновить рабочую копию перед внесением
+                            локальных изменений в репозиторий.
+                        </p>
+                    </div>
+                    <div class="content pt-5 px-3 is-size-6-mobile is-size-4-desktop">
+                        <div><strong class="has-text-primary-light">Внесение изменений в локальную
+                                рабочую копию</strong></div>
+                        <p>
+                            Большую часть времени вы будете вносить изменения в данные проекта, изменяя содержимое
+                            рабочей копии. Как только вы будете удовлетворены изменениями и тщательно их
+                            рассмотрите, вы будете готовы зафиксировать их в центральном репозитории.
+                            <br>
+                        </p>
+                        <div class="is-underlined has-text-primary-light">
+                            Изменение существующих файлов
+                        </div>
+                        <p>
+                            Измените файлы так, как вы это обычно делаете, используя ваш любимый текстовый редактор,
+                            графический редактор, программное обеспечение для редактирования звука, IDE и т. д. Как
+                            только вы сохраните изменения на диск, Subversion автоматически распознает их.
+                            <br>
+                        </p>
+                        <div class="is-underlined has-text-primary-light">
+                            Фиксация изменений в репозитории
+                        </div>
+                        <p>
+                            Чтобы опубликовать изменения, внесенные в рабочую копию, необходимо выполнить команду
+                            svn commit.
+                        </p>
+                        <div class="notification is-warning m-6">
+                            Просмотрите свои изменения перед фиксацией! Используйте команды svn status и svn diff
+                            для просмотра изменений.
+                        </div>
+                        <p>Пример команды фиксации</p>
+                        <div class="box has-background-link has-text-white">
+                            $ svn commit -m "Мое описательное сообщение журнала"
+                        </div>
+                        <p>Обратите внимание на опцию -m (--message) . Всегда следует включать
+                            описательное сообщение журнала коммита. Это должно помочь другим, включая вас, понять
+                            причину, по которой вы сделали этот коммит. Также хорошей идеей будет включить в
+                            сообщение журнала сводку ваших изменений.</p>
+                    </div>
+                    <div class="content pt-5 is-size-5 px-3 is-size-6-mobile is-size-4-desktop">
+                        <div><strong class="has-text-primary-light">Выполнение операций с файлами
+                                и каталогами</strong></div>
+                        <p>
+                            Вы можете выполнять любые действия с данными вашего проекта в рабочей копии, но
+                            операции, включающие копирование, перемещение, переименование и удаление, должны
+                            выполняться с использованием соответствующих команд svn .
+                            <br><br>
+                            Subversion не использует эвристическое отслеживание для изменений дерева в рабочей
+                            копии. Subversion требует явного отслеживания изменений дерева. Если вы выполняете
+                            изменения дерева, такие как перемещение или копирование, с помощью обычных команд
+                            файловой системы, Subversion не узнает об этой операции. Для отслеживания изменений
+                            дерева Subversion должна быть осведомлена о них.
+                        </p>
+                        <div class="is-underlined pt-4 has-text-primary-light">
+                            Добавление новых файлов и каталогов
+                        </div>
+                        <p>
+                            Поместите новые файлы или каталоги в рабочую копию, и Subversion увидит их как
+                            «неверсированные». Он не начнет автоматически отслеживать новые файлы, пока вы не
+                            выполните команду svn add :
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            $ svn add foo.cs
+                        </div>
+                        <div class="is-underlined pt-4 has-text-primary-light">
+                            Перемещение и переименование файлов и каталогов
+                        </div>
+                        <p>
+                            Перемещайте и переименовывайте файлы и каталоги с помощью команд svn move или svn rename
+                            :
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            $ svn move foo.cs bar.cs
+                        </div>
+                        <p>
+                            Команда svn rename является псевдонимом для svn move .
+                        </p>
+                        <div class="is-underlined pt-4 has-text-primary-light">
+                            Копирование файлов и каталогов
+                        </div>
+                        <p>
+                            Скопируйте файлы и каталоги с помощью команды svn copy :
+                        </p>
+                        <div class="box is-size-5 has-background-link has-text-white">
+                            $ svn копировать foo.cs bar.cs
+                        </div>
+                        <div class="is-underlined pt-4 has-text-primary-light">
+                            Удаление файлов и каталогов
+                        </div>
+                        <p>
+                            Удалите файлы и каталоги с помощью команды svn delete svn delete :
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            $ svn удалить foo.cs
+                        </div>
+                        <div class="is-underlined pt-4 has-text-primary-light">
+                            Отмена или отмена локальных изменений
+                        </div>
+                        <p>
+                            Отмените локальные незафиксированные изменения с помощью команды svn revert :
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            $ svn revert foo.cs
+                        </div>
+                        <div class="notification is-warning m-6">
+                            Отмененные неподтвержденные изменения будут утеряны навсегда. Вы не сможете восстановить
+                            отмененные изменения. Используйте svn revert с осторожностью!
+                        </div>
+                    </div>
+                    <div class="content pt-5 is-size-5 px-3">
+                        <div><strong class="has-text-primary-light">Ветвление и
+                                маркировка</strong></div>
+                        <p>
+                            Для создания веток и тегов следует использовать команду svn copy . Это та же команда,
+                            которая используется для копирования элементов в рабочей копии и в репозитории, когда вы
+                            хотите, чтобы они были исторически связаны.
+                            <br><br>
+                            Команда svn copy используется для ветвления, поскольку технически ветвь является копией
+                            источника, из которого вы копируете. Однако это не обычная копия, с которой вы знакомы
+                            при копировании файлов в локальной файловой системе. Ветви в репозиториях Subversion —
+                            это так называемые «дешевые копии» , которые похожи на символические ссылки. Поэтому
+                            создание новой ветки занимает минимальное время и практически не занимает места в
+                            репозитории Subversion. Вы можете создавать ветви и использовать их для любых изменений,
+                            независимо от размера и области действия изменения.
+                        </p>
+                        <div class="is-underlined pt-4 has-text-primary-light">
+                            Создание ветки с помощью прямого копирования URL-адреса в URL-адрес
+                        </div>
+                        <p>
+                            Ветвление в Subversion простое. В простейшей форме создание новой ветки требует от вас
+                            выполнения команды для URL-адресов удаленного репозитория. Например, давайте создадим
+                            новую ветку из основного ствола:
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            $ svn copy https://example.com/
+                            MyRepo/trunk
+                            https://example.com
+                            /MyRepo/branches/
+                            MyNewBranch -m "Создание новой ветки"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-4">Настройка
+                        локального репозитория</h1>
+                </div>
+                <div class="columns">
+                    <div
+                        class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop px-3">
+                        <p>
+                            Вы можете создать репозиторий Subversion на своем компьютере и использовать схему file://
+                            для локального взаимодействия с ним. Такой подход может помочь вам использовать Subversion
+                            локально для отслеживания личных файлов и проектов одного человека.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="columns">
+                <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content pt-4 is-size-7-mobile px-3">
+                        <p>
+                            Следующая процедура создает минимальную среду для существующего проекта. Она преобразует
+                            каталог с проектом в рабочую копию недавно созданного локального репозитория Subversion. В
+                            результате вы можете изменять файлы в рабочей копии и отслеживать изменения в локальном
+                            репозитории.
+
+                        <figure class="image is-2by1 ml-6">
+                            <img src="assets/subversion-settings.png" alt="programmers">
+                        </figure>
+
+                        В Unix-системах:
+                        </p>
+                        <ol>
+                            <li>Создайте родительский каталог .svnrepos , в котором вы разместите свои репозитории
+                                SVN:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    $ mkdir -p $HOME/.svnrepos/
+                                </div>
+                            </li>
+                            <li>Создайте новый репозиторий MyRepo в .svnrepos :
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    $ svnadmin create ~/.svnrepos/MyRepo
+                                </div>
+                            </li>
+                            <li>Создайте рекомендуемый макет проекта в новом репозитории:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    $ svn mkdir -m "Create directory structure." \
+                                    file://$HOME/.svnrepos/
+                                    MyRepo/trunk \
+                                    file://$HOME/.svnrepos/
+                                    MyRepo/branches \
+                                    file://$HOME/.svnrepos/
+                                    MyRepo/tags
+                                </div>
+                            </li>
+                            <li>Измените каталог на ./MyProject , где находится ваш неверсированный проект:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    $ cd $HOME/MyProject
+                                </div>
+                            </li>
+                            <li>Преобразовать текущий каталог в рабочую копию trunk/ в репозитории:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    $ svn checkout file://$HOME/
+                                    .svnrepos/MyRepo/trunk ./
+                                </div>
+                            </li>
+                            <li>Запланируйте добавление файлов вашего проекта в репозиторий:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    $ svn add --force ./
+                                </div>
+                            </li>
+                            <li>Зафиксируйте файлы проекта:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    $ svn commit -m "Initial import."
+                                </div>
+                            </li>
+                            <li>Обновите рабочую копию:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    $ svn update
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="content pt-5 is-size-7-mobile">
+                        <p>
+                            В Windows:
+                        </p>
+                        <ol>
+                            <li>Создайте родительский каталог C:\Repositories , в котором вы разместите свои
+                                репозитории SVN:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    mkdir C:\Repositories
+                                </div>
+                            </li>
+                            <li>Создайте новый репозиторий MyRepo в C:\Repositories :
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    svnadmin create C:\Repositories\MyRepo
+                                </div>
+                            </li>
+                            <li>Создайте рекомендуемый макет проекта в новом репозитории:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    svn mkdir -m "Create directory structure." ^
+                                    file:///C:/Repositories/
+                                    MyRepo/trunk ^
+                                    file:///C:/Repositories/
+                                    MyRepo/branches ^
+                                    file:///C:/Repositories/
+                                    MyRepo/tags
+                                </div>
+                            </li>
+                            <li>Измените каталог на C:\MyProject , где находится ваш неверсированный проект:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    cd C:\MyProject
+                                </div>
+                            </li>
+                            <li>Преобразовать текущий каталог в рабочую копию trunk/ в репозитории:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    svn checkout file:///C:/
+                                    Repositories/MyRepo/trunk .
+                                </div>
+                            </li>
+                            <li>Запланируйте добавление файлов вашего проекта в репозиторий:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    svn add --force ./
+                                </div>
+                            </li>
+                            <li>Зафиксируйте файлы проекта:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    svn commit -m "Initial import."
+                                </div>
+                            </li>
+                            <li>Обновите рабочую копию:
+                                <div class="box is-size-6 mt-4 has-background-link has-text-white">
+                                    svn update
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-5">Как рабочие копии
+                        отслеживают хранилище<h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <p>
+                            В служебной папке .svn/ для каждого файла рабочей папки Subversion записывает информацию о
+                            двух важнейших свойствах:
+                        </p>
+                        <div class="content pt-5">
+                            <ul>
+                                <li>На какой ревизии основан ваш рабочий файл (это называется рабочая ревизия файла)
+                                </li>
+                                <li>Дату и время, когда локальная копия последний раз обновлялась из хранилища.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="columns">
+                <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+
+                    <figure class="image is-2by1 ml-6">
+                        <img src="assets/svn-logic.png" alt="programmers">
+                    </figure>
+
+                    <p>
+                        Основываясь на этой информации, и взаимодействуя с хранилищем, Subversion может сказать, в
+                        каком из следующих четырех состояний находится рабочий файл:
+                    </p>
+                    <div class="content pt-5">
+                        <ul>
+                            <li><strong class="has-text-primary-light">Не изменялся и не устарел. </strong>Файл не
+                                изменялся в рабочей папке, и в хранилище не фиксировались изменения этого файла со
+                                времени его рабочей ревизии. Команды фиксировать (commit) и обновить (update) ничего
+                                делать не будут.</li>
+                            <li><strong class="has-text-primary-light">Изменён локально и не устарел. </strong>Файл
+                                был изменён в рабочей папке, и в хранилище не фиксировались изменения этого файла со
+                                времени его базовой ревизии. Существующие локальные изменения не были зафиксированы
+                                в хранилище, поэтому команда фиксировать (commit) для файла преуспеет в
+                                опубликовании ваших изменений, а команда обновить (update) ничего делать не будет.
+                            </li>
+                            <li><strong class="has-text-primary-light">Не изменялся и устарел. </strong>Файл в
+                                рабочей
+                                папке не изменялся, но был изменён в хранилище. Со временем, файл должен быть
+                                обновлён для соответствия текущей публичной ревизии. Команда фиксировать (commit)
+                                ничего делать не будет, а команда обновить (update) внесёт последние изменения в
+                                вашу рабочую копию.
+                            </li>
+                            <li><strong class="has-text-primary-light">Изменён локально и устарел. </strong>Файл был
+                                изменён как в рабочей папке, так и в хранилище. Команда фиксировать (commit)
+                                потерпит неудачу с ошибкой устарел (out-of-date). Файл необходимо сначала обновить;
+                                команда обновить (update) попытается объединить опубликованные изменения с
+                                локальными. Если Subversion не сможет выполнить объединение в приемлемой форме
+                                самостоятельно, то заботу о разрешении конфликта она оставит пользователю.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-6">Источники</h1>
+                </div>
+                <!-- cards -->
+                <section class="section">
+                    <div class="container">
+                        <div class="columns is-centered is-8 is-variable is-multiline">
+                            <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
+                                <div class="card has-background-link">
+                                    <div class="card-content">
+                                        <ol class="ml-5 has-text-white">
+                                            <li><a class="has-text-white"
+                                                    href="https://subversion.apache.org/">Subversion</a><br></li>
+                                            <li><a class="has-text-white"
+                                                    href="https://www.tutorialspoint.com/svn/index.htm">Subversion -
+                                                    tutorial</a><br></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <!-- Pagination -->
+                <section class="section">
+                    <div class="container" style="top: 300px;">
+                        <div class="box paginationStyle">
+                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                                <a href="subversion.html" class="pagination-previous">Назад</a>
+                                <a href="mercurial.html" class="pagination-next">Вперед</a>
+                                <ul class="pagination-list">
+                                    <li><a href="index.html" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="subversion.html" class="pagination-link"
+                                            aria-label="Goto page 45">4</a>
+                                    </li>
+                                    <li><a href="#" class="pagination-link is-current" aria-label="Goto page 45">5</a>
+                                    </li>
+                                    <li><a href="mercurial.html" class="pagination-link" aria-label="Goto page 47">6</a>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="comparison.html" class="pagination-link" aria-label="Goto page 1">8</a>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="modal-1">
+        <div class="modal-background" id="contact-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">Контактная информация</h3>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Владелец: Широков Глеб Вадимович
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Прямой городской номер +8932342444
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Телефон по все России +89425255252
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="modal-2">
+        <div class="modal-background" id="about-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">О нас</h3>
+            <p class="is-size-5 has-text-white">Данный сайт был создан с целью публикации информации на различные
+                темы.
+                Здесь вы можете
+                найти полезные
+                статьи, советы и рекомендации по самым разнообразным вопросам. Наша цель - делиться знаниями и
+                помогать
+                посетителям узнавать новое и интересное. Благодарим вас за посещение сайта и надеемся, что вы
+                найдете
+                здесь то, что вас заинтересует!</p>
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
+
+    <!-- Footer -->
+    <footer class="footer has-background-link">
+        <div class="content has-text-centered">
+            <section class="section changeWidth">
+                <div class="container">
+                    <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права
+                        защищены.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

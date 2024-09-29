@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Comprasion</title>
+    <script defer src="https://use.fontawesome.com/releases/v6.6.0/js/all.js"></script>
+</head>
+
+<body class="bg">
+    <header>
+        <section class="hero is-fullheight"
+            style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
+            <!-- navbar -->
+            <nav class="navbar is-soft is-fixed-top has-background-link">
+                <div class="navbar-brand">
+                    <a class="navbar-burger has-text-white" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="navbar-menu has-background-link" id="nav-links">
+                    <div class="navbar-start py-3 px-3">
+                        <h3 class="title is-size-1 has-text-primary-light">Control Tree</h3>
+                    </div>
+                    <div class="navbar-end px-3">
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="contacts"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </span>
+                            <span>Контактная информация</span>
+                        </a>
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>О нас</span>
+                        </a>
+                        <!-- Header-topic for mobile -->
+                        <div class="container is-hidden-desktop">
+                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-1">Введение</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-2">Система одновременных версий (CVS)</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-3">Apache Subversion (SVN)</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-4">GIT</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-5">Mercurial</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-6">Что выбрать???</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-7">Хостинг</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-8">Графические клиенты</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-9">Источники</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-10">Заключение</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Title -->
+            <div class="hero-body">
+                <div class="">
+                    <div class="containter pl-6">
+                        <p class="title is-size-1 has-text-primary-light">Сравнение систем контроля версий</p>
+                        <p class="subtitle is-primary-invert">подготовлено редакций сайта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- BreadCrumbs -->
+    <section class="section pb-0 changeWidth">
+        <div class="container">
+            <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html" class="has-text-info">Системы контроля версий</a></li>
+                    <li class="is-active"><a class="has-text-grey" href="#" aria-current="page">Сравнение систем</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- side bar for desks/tablets -->
+    <div class="is-widescreen is-hidden-touch is-desktop bg1">
+        <aside class="menu" id="menu">
+            <div class="box has-background-link">
+                <p class="menu-label has-text-primary-light is-size-4">
+                    Содержание
+                </p>
+                <ul class="menu-list is-size-5">
+                    <li><a class="is-active is-primary" class="has-background-white" href="#Topic-1">Введение</a>
+                    </li>
+                    <li><a href="#Topic-2">Система одновременных версий (CVS)</a></li>
+                    <li><a href="#Topic-3">Apache Subversion (SVN)</a></li>
+                    <li><a href="#Topic-4">GIT</a></li>
+                    <li><a href="#Topic-5">Mercurial</a></li>
+                    <li><a href="#Topic-6">Что выбрать???</a></li>
+                    <li><a href="#Topic-7">Хостинг</a></li>
+                    <li><a href="#Topic-8">Графические клиенты</a></li>
+                    <li><a href="#Topic-9">Источники</a></li>
+                    <li><a href="#Topic-10">Заключение</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Content -->
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-1">Введение
+                </h1>
+                <!-- Breadcrumb -->
+                <div class="box is-three-quarters has-background-link">
+                    <div class="subtitle is-justify-content-center is-flex p-5">
+                        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-solid fa-calendar-days"></i>
+                                        </span>
+                                        <span class="has-text-white">Дата создания 23.09.2024</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-regular fa-clock"></i></i>
+                                        </span>
+                                        <span class="has-text-white">5 мин. чтения</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="share">
+                                        <span class="icon is-small has-text-white"><i class="fa-solid fa-share"></i>
+                                        </span>
+                                        <span class="has-text-white">Поделиться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <p class="pb-5 px-3">
+                        Системы контроля версий, в том числе широко известные SVN (Subversion) и Git, изначально
+                        создавались, чтобы команды разработчиков могли работать над совместными проектами, не
+                        создавая путаницы. В системе контроля не надо самостоятельно отслеживать ветви кода и
+                        изучать примечания к ним. Вместо этого используется центральный репозиторий, где всё
+                        упорядочено, структурировано. Здесь удобно обновлять файлы, добавлять комментарии и даже
+                        проводить слияние веток проекта.
+                        <br><br>
+                        Мнения в отношении того, какая система контроля версий самая лучшая, сильно разнятся, и это
+                        приводит к бурным спорам в среде программистов. Подбирая и изучая системы контроля версий
+                        для вашего проекта, не забывайте, что преимущества того или иного решения часто субъективны.
+                        Например, личные предпочтения программиста или, скажем, такие показатели как быстродействие,
+                        возможности плагинов IDE и т.д.
+                        <br><br>
+                        Главное отличие между системами контроля версий состоит в том, какие они: клиент-серверные
+                        или децентрализованные (p2p). Есть ли у них центральный репозиторий (сервер), откуда код
+                        берется и куда возвращается с внесенными изменениями. Или это копия в локальном хранилище,
+                        обновляемая посредством пиров: более децентрализованная сеть, используемая для
+                        синхронизации, обмена патчами (наборами изменений) и для поддержки текущего кода.
+                        <br><br>
+                        Стоит также учесть быстродействие, функциональность и порог вхождения/освоения конкретной
+                        системы контроля. Рассмотрим наиболее распространенные системы контроля версий и те причины,
+                        по которым программисты предпочитают те или иные решения.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-2">Система
+                        одновременных версий (CVS)
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content  mx-3">
+                            <p>
+                                CVS появилась в 1980-х и до сих пор популярна как у разработчиков коммерческих
+                                продуктов, так и у open-source разработчиков.
+                                <br><br>
+                                CVS распространяется на условиях Открытого лицензионного соглашения GNU и позволяет
+                                получать с сервера нужную версию проекта — «check-out» (извлечение), а затем пересылать
+                                обратно на сервер, «check-in» (возврат), с внесенными изменениями.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content mx-3">
+                        <p>
+                            Изначально CVS была создана, чтобы избежать конфликта версий. Всем участникам для работы
+                            предоставлялась только самая последняя версия кода. Это была первая система контроля
+                            версий. Пользователю нужно было быстро фиксировать изменения в репозитории, пока другие
+                            не опередили его.
+                            <br><br>
+                            Сейчас CVS имеет поддержку работы над проектами с ветками кода. Получается несколько
+                            вариантов продукта с разными характеристиками, которые можно будет объединить позднее.
+                            <br><br>
+                            Сервера CVS обычно работают под управлением Unix, но CVS-клиенты доступны и в других
+                            популярных операционных системах. CVS — «зрелая», проверенная временем система контроля
+                            версий. Это по-прежнему опенсорсная система, но на сегодняшний день новые функции
+                            добавляются довольно редко.
+                            При этом CVSNT, — выделившаяся в отдельный проект версия CVS для серверов Windows, —
+                            сейчас достаточно активно расширяет функционал.
+                        </p>
+                        <div class="has-text-primary-light">
+                            <strong class="has-text-primary">Преимущества</strong>
+                        </div>
+                        <ul>
+                            <li>Испытанная временем технология, которая удерживается на рынке десятки лет.</li>
+                        </ul>
+                        <div class="has-text-primary-light">
+                            <strong class="has-text-danger">Недостатки</strong>
+                        </div>
+                        <ul>
+                            <li>Переименование или перемещение файлов не отражается в истории</li>
+                            <li>Риски безопасности, связанные с символическими ссылками на файлы</li>
+                            <li>Нет поддержки атомарных операций, что может привести к повреждению кода</li>
+                            <li>Операции с ветками программного кода дорогостоящие, так как эта система контроля не
+                                предназначена для долгосрочных проектов с ветками кода</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-3">Apache Subversion
+                        (SVN)
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content">
+                            <div class="columns is-centered px-3">
+                                <div class="column">
+                                    <figure class="image is-2by1">
+                                        <img src="assets/subversion_logo.png" />
+                                    </figure>
+                                </div>
+                                <div class="column is-half-desktop">
+                                    <p>SVN создавалась как альтернатива CVS с целью исправить
+                                        недостатки CVS и в то же
+                                        время обеспечить высокую совместимость с ней.</p>
+                                </div>
+                            </div>
+                            <p class="mx-3">
+                                Как и CVS, SVN это бесплатная система контроля версий с открытым исходным кодом. С той
+                                лишь разницей, что распространяется под лицензией Apache, а не под Открытым лицензионным
+                                соглашением GNU.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content">
+                        <p class="mx-3">
+                            Для сохранения целостности базы данных SVN использует так называемые атомарные операции.
+                            При появлении новой версии к финальному продукту применяются либо все исправления, либо
+                            ни одно из них. Таким образом, код защищают от хаотичных частичных правок, которые не
+                            согласуются между собой и вызывают ошибки.
+                            <br><br>
+                            Многие разработчики переключились на SVN, так как новая технология унаследовала лучшие
+                            возможности CVS и в то же время расширила их.
+                            <br><br>
+                            В то время как в CVS операции с ветками кода дорогостоящие и не предусмотрены
+                            архитектурой системы, SVN создана как раз для этого. То есть, для более крупных проектов
+                            с ветвлением кода и многими направлениями разработки.
+                            <br><br>
+                            В качестве недостатков SVN упоминаются сравнительно низкая скорость и нехватка
+                            распределенного управления версиями. Распределенный контроль версий использует
+                            пиринговую модель, а не централизованный сервер для хранения обновлений программного
+                            кода. И хотя пиринговая модель работает лучше в open source проектах, она не идеальна в
+                            других случаях. Недостаток серверного подхода в том, что когда сервер падает, то у
+                            клиентов нет доступа к коду.
+                        </p>
+                        <div class="has-text-primary-light">
+                            <strong class="has-text-primary">Преимущества</strong>
+                        </div>
+                        <ul>
+                            <li>Система на основе CVS
+                            </li>
+                            <li>Допускает атомарные операции
+                            </li>
+                            <li>Операции с ветвлением кода менее затратны
+                            </li>
+                            <li>Широкий выбор плагинов IDE
+                            </li>
+                            <li>Не использует пиринговую модель
+                            </li>
+                        </ul>
+                        <div class="has-text-primary-light">
+                            <strong class="has-text-danger">Недостатки:</strong>
+                        </div>
+                        <ul>
+                            <li>Все еще сохраняются ошибки, связанные с переименованием файлов и директорий
+                            </li>
+                            <li>Неудовлетворительный набор команд для работы с репозиторием
+                            </li>
+                            <li>Сравнительно небольшая скорость
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-4">GIT
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content">
+                            <div class="columns is-centered px-3">
+                                <div class="column">
+                                    <figure class="image is-2by1">
+                                        <img src="assets/git_logo.png" />
+                                    </figure>
+                                </div>
+                                <div class="column is-half-desktop">
+                                    <p>Эта система была создана для управления разработкой ядра Linux
+                                        и использует подход, который в корне отличается от CVS и SVN.</p>
+                                </div>
+                            </div>
+                            <p class="mx-3">
+                                В основу Git закладывались концепции, призванные создать более быструю распределенную
+                                систему контроля версий, в противовес правилам и решениям, использованным в CVS. Так как
+                                Git разрабатывалась главным образом под Linux, то именно в этой ОС она работает быстрее
+                                всего.
+                                <br><br>
+                                Git также работает на Unix-подобных системах (как MacOS), а для работы на платформе
+                                Windows используется пакет mSysGit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content ">
+                        <p class="mx-3">
+                            <br><br>
+                            Программный код может быть недоступен, когда используется компьютер без репозитория. Для
+                            решения этой проблемы есть обходные пути и некоторые разработчики полагают, что
+                            быстродействие Git является справедливой платой за неудобства.
+                            <br><br>
+                            Кроме того, в Git есть множество инструментов для навигации по истории изменений. Каждая
+                            рабочая копия исходного кода содержит всю историю разработки, что крайне полезно, когда
+                            программируешь без Интернет-соединения.
+                        </p>
+                        <div class="has-text-primary-light">
+                            <strong class="has-text-primary">Преимущества</strong>
+                        </div>
+                        <ul>
+                            <li>Прекрасно подходит для тех, кто ненавидит CVS/SVN</li>
+                            <li>Значительное увеличение быстродействия</li>
+                            <li>Дешевые операции с ветками кода</li>
+                            <li>Полная история разработки доступная оффлайн</li>
+                            <li>Распределенная, пиринговая модель</li>
+                        </ul>
+                        <div class="has-text-primary-light">
+                            <strong class="has-text-danger">Недостатки</strong>
+                        </div>
+                        <ul>
+                            <li>Высокий порог вхождения (обучения) для тех, кто ранее использовал SVN</li>
+                            <li>Ограниченная поддержка Windows (по сравнению с Linux)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue4.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-5">Mercurial
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content">
+                            <div class="columns is-centered px-3">
+                                <div class="column">
+                                    <figure class="image is-2by1">
+                                        <img src="assets/mercurial_logo.png" />
+                                    </figure>
+                                </div>
+                                <div class="column is-half-desktop">
+                                    <p>Mercurial была выпущена одновременно с Git. Это также
+                                        распределенная система контроля версий.</p>
+                                </div>
+                            </div>
+                            <p class="mx-3">
+                                Mercurial создавалась в качестве альтернативы Git для разработки модулей ядра Linux. Но
+                                так как выбрали все-таки Git, то Mercurial используется меньше. Тем не менее, многие
+                                ведущие разработчики работают именно с этой системой, например OpenOffice.org.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content">
+                        <p class="mx-3">
+                            Система контроля версий Mercurial отличается от других систем контроля версий тем, что
+                            главным образом она написана на Python (а не С). Однако, некоторые части выполнены в
+                            качестве модулей-расширений на C.
+                            <br><br>
+                            Поскольку система децентрализованная и написана на Python, многие Python-программисты
+                            склоняются к переходу на Mercurial.
+                            <br><br>
+                            Пользователи отмечают, что Mercurial сохранила некоторые характеристики SVN, являясь при
+                            этом распределенной системой, и благодаря этой схожести, порог вхождения у нее ниже для
+                            тех, кто уже знаком с SVN. Также документация по Mercurial более полная, что помогает
+                            быстрее освоиться с различиями.
+                            <br><br>
+                            Один из существенных недостатков Mercurial заключается в том, что в отличии от Git в ней
+                            нельзя объединить две родительские ветки, так как Mercurial использует систему плагинов,
+                            а не поддержку скриптов. Это отлично подходит для некоторых программистов, но многие не
+                            хотят отказываться от возможностей Git.
+                        </p>
+                        <div class="has-text-primary-light">
+                            <strong class="has-text-primary">Преимущества</strong>
+                        </div>
+                        <ul>
+                            <li>По сравнению с Git легче в освоении</li>
+                            <li>Подробная документация</li>
+                            <li>Распределенная модель системы контроля версий</li>
+                        </ul>
+                        <div class="has-text-primary-light">
+                            <strong class="has-text-danger">Недостатки</strong>
+                        </div>
+                        <ul>
+                            <li>Нет возможности слияния двух родительских веток</li>
+                            <li>Использование плагинов, а не скриптов</li>
+                            <li>Меньше возможностей для нестандартных решений</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue5.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-6">Что выбрать???
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content">
+                            <p class="mx-3">
+                                В большинстве случаев разработчики используют CVS потому что это им привычнее. Если
+                                команда уже работает над проектом, то перспектива переноса всех наработок в другую
+                                систему контроля как-то не вдохновляет. Если бы им все-таки пришлось менять систему, то,
+                                скорее всего, они переключились бы на SVN.
+                                <br><br>
+                                CVS уже достигла статуса “зрелой технологии”, а это значит, что в ней уже не появится
+                                радикально новых функций и решений. Инерция привычки теряется, так как люди переходят на
+                                SVN. А значит CVS постепенно уходит в прошлое.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content">
+                        <p class="mx-3">
+                            Сегодня SVN удерживает пальму первенства среди серверных систем контроля версий. Она
+                            включает в себя преимущества CVS и превосходит их. Если же говорить о
+                            распространенности, то вы, скорее всего, будете чаще сталкиваться с CVS или SVN, чем с
+                            Git или Mercurial. Таким образом, знание одной серверной технологии, хотя и не является
+                            необходимым, облегчит вам переход.
+                            <br><br>
+                            Благодаря широкому использованию и зрелости технологии, в SVN накоплена большая база
+                            знаний, что дает пользователям возможность легко получать помощь.
+                            <br><br>
+                            У Git явно выше быстродействие по сравнению с конкурентами. Для проектов, которые
+                            создаются под распределенные системы контроля версий, это очевидное улучшение.
+                            <br><br>
+                            Существенным недостатком Git является то, что порой трудно объяснить нюансы работы
+                            данной системы контроля, и это тормозит рабочий процесс, пока программисты привыкают к
+                            ней. Однако, как только «порог вхождения» преодолен, продуктивность возрастает и
+                            удобство управления ветками кода сполна окупит потраченное время.
+                            <br><br>
+                            Для тех, кто терпеть не может Git (а у этой системы есть свои противники в среде
+                            разработчиков), Mercurial — это компромисс между SVN и Git. Эта система используется во
+                            многих известных проектах, а также у нее хорошая документация.
+                            <br><br>
+                            Совместимая с Windows версия Git также прогрессирует, приближаясь по своему
+                            быстродействию к Linux-версии, так что эта система может быть для вас актуальна, даже
+                            если вы не ведете разработку в Linux.
+                            <br><br>
+                            Чтобы понять, какая же лучше для вас, учитывайте особенности проекта и вашей команды.
+                            Поговорите с разработчиками!
+                            <br><br>
+                            Если для проекта требуется единое дерево исходного кода, над которым будет работать
+                            небольшая группа программистов, то SVN – это ваш вариант. Она надежна и предназначена
+                            как раз для таких случаев.
+                            <br><br>
+                            Если же вы запускаете open-source проект, над которым в разное время будут трудиться
+                            несколько программистов или, если предполагается постоянное обновление кода, то
+                            выбирайте Git. Скорость и управление деревом исходного кода здесь намного лучше, чем в
+                            SVN.
+                            <br><br>
+                            Если вы на распутье или вам просто не нравится, как работают SVN или Git, тогда к вашим
+                            услугам Mercurial.
+                            <br><br>
+                            Все эти системы полностью функциональны. А также бесплатны. Они используются для
+                            создания программного обеспечения, сайтов и даже операционных систем, которыми вы
+                            пользуетесь, и которые вам известны.
+                            <br><br>
+                            Прежде всего, решите, подходит ли та или иная система контроля версий для вашего
+                            бизнеса, а затем — что не менее важно — убедитесь, что этот выбор не приведет в ярость
+                            программистов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-7">Хостинг
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content">
+                            <p class="mx-3">
+                                Если вы никогда не работали с SVN или Git, и понятия не имеете, как начать, то
+                                хостинговое решение в сочетании с графическим интерфейсом помогут вам быстро освоиться.
+                                <br><br>
+                                Как и в большинстве случаев, самое главное — начать работу, а там уже придет понимание.
+                                Эксплуатация системы контроля версий очень похожа на работу с файлами на сервере с
+                                использованием FTP-клиента.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content">
+                        <div class="columns is-centered px-3">
+                            <div class="column">
+                                <figure class="image is-2by1">
+                                    <img src="assets/beanstalk.png" />
+                                </figure>
+                            </div>
+                            <div class="column is-half-desktop">
+                                <p>Beanstalk
+                                    – безопасный, надежный и подходящий для хостинга Git и Subversion. Просмотр
+                                    активности, файлов, сравнение ревизий. Отличный пользовательский интерфейс.
+                                    Интеграция со многими популярными сервисами, включая Twitter! Цена вопроса: от
+                                    $15 в месяц</p>
+                            </div>
+                        </div>
+                        <div class="columns is-centered px-3">
+                            <div class="column">
+                                <figure class="image is-2by1">
+                                    <img src="assets/unfuddle.png" />
+                                </figure>
+                            </div>
+                            <div class="column is-half-desktop">
+                                <p>Unfuddle
+                                    – популярный среди разработчиков ПО хостинг для SVN, Git и управления проектами
+                                    с хостинговым решением. С помощью виджета для Mac OS с простым и понятным
+                                    интерфейсом вы можете следить за активностью в аккаунте во всех ваших проектах.
+                                    2 пользователя бесплатно + 1 проект с хранилищем до 200MB</p>
+                            </div>
+                        </div>
+                        <div class="columns is-centered px-3">
+                            <div class="column">
+                                <figure class="image is-2by1">
+                                    <img src="assets/sliksvn.png" />
+                                </figure>
+                            </div>
+                            <div class="column is-half-desktop">
+                                <p>SlikSVN
+                                    – еще одна опция для бесплатного хостинга, но не такая хорошая как Unfuddle. 1
+                                    пользователь бесплатно + 1 проект с хранилищем до 100MB
+                                </p>
+                            </div>
+                        </div>
+                        <div class="columns is-centered px-3">
+                            <div class="column">
+                                <figure class="image is-2by1">
+                                    <img src="assets/xp-dev.png" />
+                                </figure>
+                            </div>
+                            <div class="column is-half-desktop">
+                                <p>XP-Dev.com
+                                    – хостинг Subversion, Git и Mercurial. Отличное соотношение цены и функционала.
+                                    От $5 в месяц, неограниченное число проектов, пользователей и хранилище до 2GB
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue4.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-8">Графические
+                        клиенты
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content is-size-5">
+                            <p class="mx-3">
+                                Итак, репозиторий создан. Теперь нужно, чтобы в нем все отображалось просто и наглядно.
+                                Для этого вам понадобится графический интерфейс.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content is-size-5">
+                        <div class="columns is-centered px-3">
+                            <div class="column">
+                                <figure class="image is-2by1">
+                                    <img src="assets/tortoise-svn.png" />
+                                </figure>
+                            </div>
+                            <div class="column is-half-desktop">
+                                <p>TortoiseSVN
+                                    – удобная программа для работы с системами контроля версий в Microsoft Windows
+                                    и, возможно, лучший из представленных Apache Subversion клиент. TortoiseSVN
+                                    реализован как расширение оболочки Windows, что позволяет легко интегрировать
+                                    его в браузер. Кроме того, это программа с открытым исходным кодом, для которой
+                                    доступны 34 языковых пакета
+                                </p>
+                            </div>
+                        </div>
+                        <div class="columns is-centered px-3">
+                            <div class="column">
+                                <figure class="image is-2by1">
+                                    <img src="assets/smartGit.png" />
+                                </figure>
+                            </div>
+                            <div class="column is-half-desktop">
+                                <p>SmartGit
+                                    – графический клиент Git (Open Source распределенная система контроля версий).
+                                    Работает в Windows, Mac OS X и Linux. Стоимость лицензии — $39</p>
+                            </div>
+                        </div>
+                        <div class="columns is-centered px-3">
+                            <div class="column">
+                                <figure class="image is-2by1">
+                                    <img src="assets/versions.png" />
+                                </figure>
+                            </div>
+                            <div class="column is-half-desktop">
+                                <p>Versions
+                                    – SVN клиент для MAC OS X – Versions: простейшая система контроля версий для
+                                    Mac. По их собственным словам: «Благодаря нашему подходу, вы сможете начать без
+                                    раскачки». Данный клиент прост в использовании. Цена вопроса: £39 (примерно $50
+                                    согласно текущему курсу)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="columns is-centered px-3">
+                            <div class="column">
+                                <figure class="image is-2by1">
+                                    <img src="assets/tower.png" />
+                                </figure>
+                            </div>
+                            <div class="column is-half-desktop">
+                                <p>Tower
+                                    – Клиент GIT для MAC OS X – еще одно элегантное решение, идеально подходящее для
+                                    пользователей GIT, которые уже знакомы с синтаксисом командной строки. Есть
+                                    также хороший ознакомительный обзор продукта, содержащий множество базовых
+                                    концепций GIT (см. ниже). ~ примерно $50 за лицензию, доступны менее затратные
+                                    мульти-лицензионные опции.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="box titleBg">
+                <div class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-10">
+                    Заключение
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <p>
+                        Когда выбирается система контроля версий, важно учитывать потребности вашей команды или
+                        проекта.
+                        Каждая система имеет свои особенности и преимущества, поэтому важно провести анализ для
+                        определения наилучшего варианта. Учитывайте размер команды, тип проекта, требования к
+                        безопасности и функциональные возможности системы. Только учитывая все эти факторы, можно
+                        принять обоснованное решение о выборе системы контроля версий.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile is-size-4-mobile has-text-primary-light"
+                        id="Topic-9">Источники</h1>
+                </div>
+
+                <!-- cards -->
+                <section class="section">
+                    <div class="container">
+                        <div class="columns is-centered is-8 is-variable is-multiline">
+                            <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
+                                <div class="card has-background-link">
+                                    <div class="card-content">
+                                        <ol class="ml-5 has-text-white">
+                                            <li><a class="has-text-white"
+                                                    href="https://subversion.apache.org/">Subversion</a><br></li>
+                                            <li><a class="has-text-white"
+                                                    href="https://www.mercurial-scm.org/">Mercurial</a><br></li>
+                                            <li><a class="has-text-white" href="https://git-scm.com/">GIT</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <!-- Pagination -->
+                <section class="section">
+                    <div class="container" style="top: 50px;">
+                        <div class="box paginationStyle">
+                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                                <a href="#" class="pagination-previous">Назад</a>
+                                <a href="#" class="pagination-next">Вперед</a>
+                                <ul class="pagination-list">
+                                    <li><a href="index.html" class="pagination-link" aria-label="Goto page 1">1</a>
+                                    </li>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="mercurial-tutorial.html" class="pagination-link"
+                                            aria-label="Goto page 45">7</a></li>
+                                    <li><a href="#" class="pagination-link is-current" aria-label="Goto page 47">8</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="modal-1">
+        <div class="modal-background" id="contact-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">Контактная информация</h3>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Владелец: Широков Глеб Вадимович
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Прямой городской номер +8932342444
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Телефон по все России +89425255252
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="modal-2">
+        <div class="modal-background" id="about-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">О нас</h3>
+            <p class="is-size-4 has-text-white">Данный сайт был создан с целью публикации информации на различные
+                темы.
+                Здесь вы можете
+                найти полезные
+                статьи, советы и рекомендации по самым разнообразным вопросам. Наша цель - делиться знаниями и
+                помогать
+                посетителям узнавать новое и интересное. Благодарим вас за посещение сайта и надеемся, что вы
+                найдете
+                здесь то, что вас заинтересует!
+            </p>
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
+
+    <!-- Footer -->
+    <footer class="footer has-background-link">
+        <div class="content has-text-centered">
+            <section class="section changeWidth">
+                <div class="container">
+                    <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права
+                        защищены.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Git-tutorial</title>
+    <script defer src="https://use.fontawesome.com/releases/v6.6.0/js/all.js"></script>
+</head>
+
+<body class="bg">
+    <header>
+        <section class="hero is-fullheight"
+            style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
+            <!-- navbar -->
+            <nav class="navbar is-soft is-fixed-top has-background-link">
+                <div class="navbar-brand">
+                    <a class="navbar-burger has-text-white" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="navbar-menu has-background-link" id="nav-links">
+                    <div class="navbar-start py-3 px-3">
+                        <h3 class="title is-size-1 has-text-primary-light">Control Tree</h3>
+                    </div>
+                    <div class="navbar-end px-3">
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="contacts"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </span>
+                            <span>Контактная информация</span>
+                        </a>
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>О нас</span>
+                        </a>
+                        <!-- Header-topic for mobile -->
+                        <div class="container is-hidden-desktop">
+                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-1">Установка</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-2">Терминология</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-3">Стартовые команды</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-4">Создание проекта</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-5">Индексация и коммит</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-6">История</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-7">Создание тегов версий</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-8">Отмена изменений до индексации</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-9">Отмена проиндексированных изменений (перед коммитом)</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-10">Удаление коммитов из ветки</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-11">Похожие статьи</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Title -->
+            <div class="hero-body">
+                <div class="">
+                    <div class="containter pl-6">
+                        <p class="title is-size-1 has-text-primary-light">Начало работы в GIT</p>
+                        <p class="subtitle is-primary-invert">подготовлено редакций сайта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- BreadCrumbs -->
+    <section class="section pb-0 changeWidth">
+        <div class="container">
+            <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html" class="has-text-info">Системы контроля версий</a></li>
+                    <li><a href="git.html" class="has-text-info">GIT</a></li>
+                    <li class="is-active"><a class="has-text-grey" href="#" aria-current="page">GIT-tutorial</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- side bar for desks/tablets -->
+    <div class="is-widescreen is-hidden-touch is-desktop">
+        <aside class="menu" id="menu">
+            <div class="box has-background-link">
+                <p class="menu-label has-text-primary-light is-size-4">
+                    Содержание
+                </p>
+                <ul class="menu-list is-size-5">
+                    <li><a class="is-active is-primary" class="has-background-white" href="#Topic-1">Установка</a>
+                    </li>
+                    <li><a href="#Topic-2">Терминология</a></li>
+                    <li><a href="#Topic-3">Стартовые команды</a></li>
+                    <li><a href="#Topic-4">Создание проекта</a></li>
+                    <li><a href="#Topic-5">Индексация и коммит</a></li>
+                    <li><a href="#Topic-6">История</a></li>
+                    <li><a href="#Topic-7">Создание тегов версий</a></li>
+                    <li><a href="#Topic-8">Отмена изменений до индексации</a></li>
+                    <li><a href="#Topic-9">Отмена проиндексированных изменений (перед коммитом)</a></li>
+                    <li><a href="#Topic-10">Удаление коммитов из ветки</a></li>
+                    <li><a href="#Topic-11">Источники</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-1">Установка
+                </h1>
+                <!-- Breadcrumb -->
+                <div class="box is-three-quarters has-background-link">
+                    <div class="subtitle is-justify-content-center is-flex p-5">
+                        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-solid fa-calendar-days"></i>
+                                        </span>
+                                        <span class="has-text-white">Дата создания 23.09.2024</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-regular fa-clock"></i></i>
+                                        </span>
+                                        <span class="has-text-white">5 мин. чтения</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="share">
+                                        <span class="icon is-small has-text-white"><i class="fa-solid fa-share"></i>
+                                        </span>
+                                        <span class="has-text-white">Поделиться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Systems cards -->
+            <section class="section">
+                <div class="container">
+                    <div class="columns is-centered is-8 is-variable is-multiline">
+                        <div class="column">
+                            <div class="card has-text-white cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-linux"></i>
+                                        </span>
+                                        <span>Linux</span>
+                                    </p>
+                                    <p class="is-size-5 has-text-centered">
+                                        apt-get install git-core
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://git-scm.com/download/linux"
+                                        class="card-footer-item has-text-white">Официальный
+                                        сайт</a>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card has-text-white cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-apple"></i>
+                                        </span>
+                                        <span>Mac</span>
+                                    </p>
+                                    <p class="is-size-5 is-size-5 has-text-centered">
+                                        brew install git
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://git-scm.com/download/mac"
+                                        class="card-footer-item has-text-white">Официальный
+                                        сайт</a>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card has-text-white cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-windows"></i>
+                                        </span>
+                                        <span>Windows</span>
+                                    </p>
+                                    <p class="is-size-5 is-size-5 has-text-centered">
+                                        Скачивание с сайта
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://git-scm.com/downloads/win"
+                                        class="card-footer-item has-text-white">Официальный
+                                        сайт</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-2">Терминология</h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-size-6-mobile is-size-4-desktop">
+                        <div class="content mx-3 has-text-white">
+                            <div><strong class="has-text-primary-light">Репозиторий</strong></div>
+                            <p>
+                                Репозиторий Git — это хранилище, в котором расположен ваш проект и его история. Это
+                                может
+                                быть локальное хранилище где-то на вашем компьютере или удаленное хранилище на сервисе
+                                типа
+                                GitHub или другом хостинге в Интернете. Репозиторий служит для отслеживания изменений в
+                                проекте, координации работы между несколькими людьми и отслеживания истории проекта.
+                            </p>
+                        </div>
+                        <figure class="image is-2by1 ml-6">
+                            <img src="assets/git-version-control.png" alt="programmers">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column is-size-6-mobile is-size-4-desktop">
+                    <div class="content mx-3 has-text-white">
+                        <p>
+                            Скажем, у вас на компьютере есть директория со всеми файлами вашего проекта. Когда вы
+                            инициализируете репозиторий Git в этой директории, Git создает скрытую поддиректорию под
+                            названием .git, в которой хранится вся информация о репозитории. Эта информация включает
+                            историю всех изменений, внесенных в репозиторий, а также его текущее состояние.
+                    </div>
+                    <div class="contentmx-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Коммит</strong></div>
+                        <p>
+                            Вы можете думать о коммите как о снимке вашего проекта в определенный момент времени.
+                            Правда, коммит содержит только информацию об изменениях, которые были внесены в
+                            репозиторий
+                            с момента последнего коммита. Он не содержит все файлы репозитория (если только это не
+                            первый коммит). Таким образом, каждый коммит — это небольшой кусочек истории
+                            репозитория,
+                            основанный на предыдущем коммите. Все они связаны между собой в цепочку, формируя
+                            историю
+                            изменений вашего проекта.
+                    </div>
+                    <div class="content mx-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Ветка</strong></div>
+                        <p>
+                            Ветка — это параллельная версия репозитория. Ветки позволяют вам работать над отдельными
+                            функциями вашего проекта, не влияя на основную версию. Закончив работу над новой фичей,
+                            вы
+                            можете объединить эту ветку с основной версией проекта.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue4.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-3">Стартовые команды
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-size-6-mobile is-size-4-desktop">
+                        <div class="content px-3 has-text-white">
+                            <div><strong class="has-text-primary-light">Импорт данных в
+                                    репозиторий</strong></div>
+                            <p>
+                                Если вы никогда ранее не использовали Git, для начала вам необходимо осуществить
+                                установку. Выполните следующие команды, чтобы Git узнал ваше имя и электронную почту.
+                                Эти данные используются для подписи изменений сделанных вами, что позволит отслеживать,
+                                кто и когда сделал изменения в файле.
+                            </p>
+                        </div>
+                        <section class="section pt-0">
+                            <section class="section pt-0">
+                                <figure class="image is-2by1 ml-6">
+                                    <img src="assets/git-start-command.jpg" alt="programmers">
+                                </figure>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3 has-text-white">
+                        <div class="content px-3 has-text-white">
+                            <div class="box has-background-link has-text-white">
+                                git config --global user.name "Your Name" <br>
+                                git config --global user.email "your_email@whatever.com"
+                            </div>
+                            <div><strong class="has-text-primary-light">Имя ветки</strong></div>
+                            <p>
+                                Мы будем использовать main в качестве имени ветки по умолчанию. Чтобы установить его,
+                                выполните следующую команду:
+                            </p>
+                            <div class="box has-background-link has-text-white">
+                                git config --global init.defaultBranch main
+                            </div>
+                        </div>
+                        <div><strong class="has-text-primary-light">Корректная обработка окончаний
+                                строк</strong></div>
+                        <p>
+                            Для пользователей Unix/Mac:
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git config --global core.autocrlf input <br>
+                            git config --global core.safecrlf warn <br>
+                        </div>
+                        <p>
+                            Для пользователей Windows:
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git config --global core.autocrlf true <br>
+                            git config --global core.safecrlf warn
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue5.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-4">Создание проекта
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                        <div class="content px-3 has-text-white">
+                            <div><strong class="has-text-primary-light">Создайте страницу</strong>
+                            </div>
+                            <p>
+                                Начните работу в пустой директории (например, respositories, если вы скачали архив с
+                                предыдущего шага) с создания пустой поддиректории work, затем войдите в неё и создайте
+                                там файл hello.html с таким содержанием:
+                            </p>
+                            <div class="box has-background-link has-text-white">
+                                mkdir work <br>
+                                cd work <br>
+                                touch hello.html
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="columns">
+                <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Создайте репозиторий</strong>
+                        </div>
+                        <p>
+                            Теперь у вас есть директория с одним файлом. Чтобы создать Git-репозиторий из этой
+                            директории, выполните команду git init.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git init
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Добавьте страницу в
+                                репозиторий</strong>
+                        </div>
+                        <p>
+                            Теперь давайте добавим в репозиторий страницу hello.html
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git add hello.html <br>
+                            git commit -m "Initial Commit"
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Проверьте состояние
+                                репозитория</strong>
+                        </div>
+                        <p>
+                            Используйте команду git status, чтобы проверить текущее состояние репозитория.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git status
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-5">Индексация и
+                        коммит<h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                        <div class="content is-size-5 px-3 has-text-white">
+                            <div><strong class="has-text-primary-light">Проверьте состояние
+                                    репозитория</strong>
+                            </div>
+                            <p>
+                                Отдельный шаг индексации в Git позволяет вам разделять большие изменения на маленькие
+                                коммиты.
+                                Предположим, что вы отредактировали три файла (a.html, b.html, и c.html).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-6">История<h1>
+            </div>
+            <div class="columns">
+                <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3 has-text-white">
+                        <p>
+                            Теперь вы
+                            хотите закоммитить все изменения, при этом чтобы изменения в a.html и b.html были одним
+                            коммитом, в то время как изменения в c.html логически не связаны с первыми двумя файлами
+                            и должны идти отдельным коммитом.
+                            В теории, вы можете сделать следующее:
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git add a.html <br>
+                            git add b.html <br>
+                            git commit -m "Changes for a and b" <br>
+                        </div>
+                        <div class="box has-background-link has-text-white">
+                            git add c.html <br>
+                            git commit -m "Unrelated change to c"
+                        </div>
+                        <div class="is-size-4 pb-5"><strong class="has-text-primary-light">Получение списка
+                                произведенных
+                                изменений — функция команды git log.</strong>
+                        </div>
+                        <div class="box has-background-link has-text-white">
+                            git log
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Однострочная история</strong>
+                        </div>
+                        <p>
+                            Вы полностью контролируете то, что отображает log. Мне, например, нравится однострочный
+                            формат:
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git log --pretty=oneline
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Контроль отображения
+                                записей</strong>
+                        </div>
+                        <p>
+                            Вот еще варианты просмотра истории:
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git log --oneline --max-count=2 <br>
+                            git log --oneline --since="5 minutes ago" <br>
+                            git log --oneline --until="5 minutes ago" <br>
+                            git log --oneline --author="Your Name" <br>
+                            git log --oneline --all
+                        </div>
+                        <p>
+                            Все варианты просмотра истории <a href="https://git-scm.com/docs/git-log">git-log</a>
+                        </p>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Изощряемся</strong>
+                        </div>
+                        <p>
+                            Вот что я использую для просмотра изменений, сделанных за последнюю неделю.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git log --all --pretty=format:"%h %cd %s (%an)" --since="7 days ago"
+                        </div>
+
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Конечный формат лога
+                            </strong>
+                        </div>
+                        <p>
+                            для большей части работы подходит следующий формат лога.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Вывод по умолчанию</strong>
+                        </div>
+                        <p>
+                            Таким образом, каждый раз, когда вы захотите посмотреть лог, вам придется много
+                            печатать. К счастью, существует несколько опций конфигурации Git, позволяющих настроить
+                            формат вывода истории по умолчанию:
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git config --global format.pretty '%h %ad | %s%d [%an]' <br>
+                            git config --global log.date short
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue8.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-7">Создание тегов
+                        версий<h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                        <div class="content px-3 has-text-white">
+                            <p>
+                                Думаю, вы согласитесь, что работать с хешами коммитов напрямую просто неудобно. Разве не
+                                было бы здорово, если бы вы могли обозначать конкретные коммиты понятными для человека
+                                названиями? Таким образом, вы могли бы четко видеть важные вехи в истории проекта. Кроме
+                                того, вы могли бы легко перейти к определенной версии проекта по ее названию. Именно для
+                                этого в Git придумали теги.
+                                <br> <br>
+                                Давайте назовем текущую версию страницы hello.html первой, то есть v1.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="columns">
+                <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Создайте тег первой версии
+                            </strong>
+                        </div>
+                        <div class="box has-background-link has-text-white">
+                            git tag v1 <br>
+                            git log
+                        </div>
+                        <p></p>
+                        Теперь текущая версия страницы называется v1.
+                        </p>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Теги для предыдущих версий
+                            </strong>
+                        </div>
+                        <p>
+                            Обозначим версию, предшествующую текущей, названием v1-beta. Прежде всего, мы
+                            переключимся на предыдущую версию. Вместо того чтобы искать хеш коммита, мы будем
+                            использовать обозначение ^, а именно v1^, указывающее на коммит, предшествующий v1.
+                        </p>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div class="box has-background-link has-text-white">
+                            git checkout v1^ <br>
+                            cat hello.html
+                        </div>
+                    </div>
+                    <div class="content  px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Переключение по имени тега
+                            </strong>
+                        </div>
+                        <p>
+                            Теперь попробуйте попереключаться между двумя отмеченными версиями.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git checkout v1 <br>
+                            git checkout v1-beta
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Просмотр тегов с помощью
+                                команды tag
+                            </strong>
+                        </div>
+                        <p>
+                            Вы можете увидеть, какие теги доступны, используя команду git tag.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git tag
+                        </div>
+                    </div>
+                    <div class="content  px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Просмотр Тегов в логах
+                                команды tag
+                            </strong>
+                        </div>
+                        <p>
+                            Вы также можете посмотреть теги в логе.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git log main --all
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-8">Отмена изменений
+                        до индексации<h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                        <div class="content  px-3 has-text-white">
+                            <div><strong class="has-text-primary-light">Переключитесь на ветку main
+                                </strong>
+                            </div>
+                            <p>
+                                Убедитесь, что вы находитесь на последнем коммите ветки main, прежде чем продолжить
+                                работу.
+                            </p>
+                            <div class="box has-background-link has-text-white">
+                                git switch main
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-9">Отмена
+                    проиндексированных изменений (перед коммитом)<h1>
+            </div>
+            <div class="columns">
+                <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                    <div class="content  px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Отмена изменений в рабочем
+                                каталоге</strong>
+                        </div>
+                        <p>
+                            Используйте команду checkout для переключения в версию файла hello.html в репозитории.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git checkout hello.html <br>
+                            git status <br>
+                            cat hello.html
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Измените файл и
+                                проиндексируйте изменения
+                            </strong>
+                        </div>
+                        <p>
+                            Внесите изменение в файл hello.html в виде нежелательного комментария. Проиндексируйте
+                            это изменение.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git add hello.html
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Проверьте состояние</strong>
+                        </div>
+                        <p>
+                            Проверьте состояние нежелательного изменения.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git status
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Сбросьте области
+                                подготовки</strong>
+                        </div>
+                        <p>
+                            Команда reset сбрасывает область подготовки к HEAD. Это очищает область подготовки от
+                            изменений, которые мы только что проиндексировали.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git reset HEAD hello.html
+                        </div>
+                        <p>
+                            Команда reset (по умолчанию) не изменяет рабочую директорию. Поэтому рабочая директория
+                            всё еще содержит нежелательный комментарий. Мы можем использовать команду checkout из
+                            предыдущего урока, чтобы убрать нежелательные изменения в рабочей директории.
+                        </p>
+                    </div>
+                    <div class="content  px-3 has-text-white">
+                        <div class="pb-4"><strong class="has-text-primary-light">Переключитесь на версию
+                                коммита</strong>
+                        </div>
+                        <div class="box has-background-link has-text-white">
+                            git checkout hello.html
+                            git status
+                        </div>
+                        <p>
+                            Наша рабочая директория опять чиста.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-10">Удаление
+                        коммитов
+                        из ветки<h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                        <div class="content px-3 has-text-white">
+                            <p>
+                                Revert из предыдущего раздела является мощной командой, которая позволяет отменить любые
+                                коммиты в репозиторий. Однако, и оригинальный и «отмененный» коммиты видны в истории
+                                ветки (при использовании команды git log).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="columns">
+                <div class="column is-desktop is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3 has-text-white">
+                        <p>
+                            Часто мы делаем коммит, и сразу понимаем, что это была ошибка. Было бы неплохо иметь
+                            команду «возврата», которая позволила бы нам сделать вид, что неправильного коммита
+                            никогда и не было. Команда «возврата» даже предотвратила бы появление нежелательного
+                            коммита в истории git log.
+                        </p>
+                        <div class="content px-3 has-text-white">
+                            <div><strong class="has-text-primary-light">Команда reset</strong>
+                            </div>
+                            <p>
+                                Мы уже видели команду reset и использовали ее для согласования области подготовки с
+                                выбранным коммитом (в предыдущем уроке мы использовали коммит HEAD).
+                                <br> <br>
+                                Если выполнить команду reset с указанием ссылки на коммит (т.е. метки HEAD, имени ветки
+                                или тега, хеша коммита), то команда...
+                            </p>
+                            <ol>
+                                <li>Изменит текущую ветку, чтобы она указывала на указанный коммит.</li>
+                                <li>Опционально сбросит область подготовки до соответствия с указанным коммитом.</li>
+                                <li>Опционально сбросит рабочую директорию до соответствия с указанным коммитом.</li>
+                            </ol>
+                        </div>
+                        <div><strong class="has-text-primary-light">Проверьте нашу
+                                историю</strong>
+                        </div>
+                        <p>
+                            Давайте сделаем быструю проверку нашей истории коммитов.
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git log
+                        </div>
+                        <p>
+                            Мы видим, что два последних коммита в этой ветке - «Oops» и «Revert Oops». Давайте
+                            удалим их с помощью сброса.
+                        </p>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Для начала отметьте эту
+                                ветку</strong>
+                        </div>
+                        <p>
+                            Но прежде чем удалить коммиты, давайте отметим последний коммит тегом, чтобы потом можно
+                            было его найти.
+
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git tag oops
+                        </div>
+                    </div>
+                    <div class="content px-3 has-text-white">
+                        <div><strong class="has-text-primary-light">Сброс к предшествующему
+                                коммиту</strong>
+                        </div>
+                        <p>
+                            Глядя на историю лога (см. выше), мы видим, что коммит с тегом v1 является коммитом,
+                            предшествующим ошибочному коммиту. Давайте сбросим ветку до этой точки. Поскольку ветка
+                            имеет тег, мы можем использовать имя тега в команде сброса reset (если она не имеет
+                            тега, мы можем использовать хеш коммита).
+                        </p>
+                        <div class="box has-background-link has-text-white">
+                            git reset --hard v1 <br>
+                            git log
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-11">Источники</h1>
+                </div>
+                <!-- cards -->
+                <section class="section">
+                    <div class="container">
+                        <div class="columns is-centered is-8 is-variable is-multiline">
+                            <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
+                                <div class="card has-background-link">
+                                    <div class="card-content">
+                                        <ol class="ml-5 has-text-white">
+                                            <li><a class="has-text-white"
+                                                    href="https://git-scm.com/docs/gittutorial">GIT-tutorial.
+                                                    Официальный
+                                                    сайт</a><br></li>
+                                            <li><a class="has-text-white"
+                                                    href="https://www.w3schools.com/git/">W3schools</a><br></li>
+                                            <li><a class="has-text-white" href="https://githowto.com/ru">HowTo</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pagination -->
+                <section class="section">
+                    <div class="container" style="top: 50px;">
+                        <div class="box paginationStyle">
+                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                                <a href="git.html" class="pagination-previous">Назад</a>
+                                <a href="subversion.html" class="pagination-next">Вперед</a>
+                                <ul class="pagination-list">
+                                    <li><a href="index.html" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                                    <li><a href="git.html" class="pagination-link" aria-label="Goto page 2">2</a></li>
+                                    <li><a href="#" class="pagination-link is-current" aria-label="Goto page 45">3</a>
+                                    </li>
+                                    <li><a href="subversion.html" class="pagination-link"
+                                            aria-label="Goto page 47">4</a>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="comparison.html" class="pagination-link"
+                                            aria-label="Goto page 47">8</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <<!-- Contact Modal -->
+        <div class="modal" id="modal-1">
+            <div class="modal-background" id="contact-bg"></div>
+            <div class="modal-content bg py-5 px-5">
+                <h3 class="title mb-6 is-size-1">Контактная информация</h3>
+                <div class="container">
+                    <div class="has-text-white is-size-5">
+                        Владелец: Широков Глеб Вадимович
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="has-text-white is-size-5">
+                        Прямой городской номер +8932342444
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="has-text-white is-size-5">
+                        Телефон по все России +89425255252
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Modal -->
+        <div class="modal" id="modal-2">
+            <div class="modal-background" id="about-bg"></div>
+            <div class="modal-content bg py-5 px-5">
+                <h3 class="title mb-6 is-size-1">О нас</h3>
+                <p class="is-size-4 has-text-justified has-text-white">Данный сайт был создан с целью публикации
+                    информации
+                    на различные темы. Здесь вы можете
+                    найти полезные
+                    статьи, советы и рекомендации по самым разнообразным вопросам. Наша цель - делиться знаниями и
+                    помогать
+                    посетителям узнавать новое и интересное. Благодарим вас за посещение сайта и надеемся, что вы
+                    найдете
+                    здесь то, что вас заинтересует!</p>
+            </div>
+        </div>
+
+        <script src="index.js" defer></script>
+
+        <!-- Footer -->
+        <footer class="footer has-background-link">
+            <div class="content has-text-centered">
+                <section class="section changeWidth">
+                    <div class="container">
+                        <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права
+                            защищены.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </footer>
+</body>
+
+</html>

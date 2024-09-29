@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Mercurial</title>
+    <script defer src="https://use.fontawesome.com/releases/v6.6.0/js/all.js"></script>
+</head>
+
+<body class="bg">
+    <header>
+        <section class="hero is-fullheight"
+            style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
+            <!-- navbar -->
+            <nav class="navbar is-soft is-fixed-top has-background-link">
+                <div class="navbar-brand is-active">
+
+                    <a class="navbar-burger has-text-white" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="navbar-menu has-background-link" id="nav-links">
+                    <div class="navbar-start py-3 px-3">
+                        <h3 class="title is-size-1 has-text-primary-light">Control Tree</h3>
+                    </div>
+                    <div class="navbar-end px-3">
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="contacts"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </span>
+                            <span>Контактная информация</span>
+                        </a>
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>О нас</span>
+                        </a>
+                        <!-- Header-topic for mobile -->
+                        <div class="container is-hidden-desktop">
+                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-1">Определение</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-2">Рабочий процесс</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-3">Каталог изменений</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-4">Команды в Mercurial</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-5">Источники</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Title -->
+            <div class="hero-body">
+                <div class="">
+                    <div class="containter pl-6">
+                        <p class="title is-size-1 has-text-primary-light">Mercurial</p>
+                        <p class="subtitle is-primary-invert">подготовлено редакций сайта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- BreadCrumbs -->
+    <section class="section pb-0 changeWidth">
+        <div class="container">
+            <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html" class="has-text-info">Системы контроля версий</a></li>
+                    <li class="is-active"><a class="has-text-grey" href="#" aria-current="page">Mercurial</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- side bar for desks/tablets -->
+    <div class="is-widescreen is-hidden-touch is-desktop bg1">
+        <aside class="menu" id="menu">
+            <div class="box has-background-link">
+                <p class="menu-label has-text-primary-light is-size-4">
+                    Содержание
+                </p>
+                <ul class="menu-list is-size-5">
+                    <li><a class="is-active is-primary" class="has-background-white" href="#Topic-1">Определение</a>
+                    </li>
+                    <li><a href="#Topic-2">Рабочий процесс</a></li>
+                    <li><a href="#Topic-3">Каталог изменений</a></li>
+                    <li><a href="#Topic-4">Команды в Mercurial</a></li>
+                    <li><a href="#Topic-5">Источники</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Content -->
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-1">Mercurial</h1>
+                <!-- Breadcrumb -->
+                <div class="box is-three-quarters has-background-link">
+                    <div class="subtitle is-justify-content-center is-flex p-5">
+                        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-solid fa-calendar-days"></i>
+                                        </span>
+                                        <span class="has-text-white">Дата создания 22.09.2024</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-regular fa-clock"></i></i>
+                                        </span>
+                                        <span class="has-text-white">5 мин. чтения</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="share">
+                                        <span class="icon is-small has-text-white"><i class="fa-solid fa-share"></i>
+                                        </span>
+                                        <span class="has-text-white">Поделиться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+
+                    <div class="content  px-3">
+                        <p>
+                            <a href="https://www.mercurial-scm.org/" class="title has-text-primary-light">Mercurial</a>
+                            — это бесплатный,
+                            распределенный инструмент управления исходным кодом. Он
+                            эффективно обрабатывает проекты любого размера и предлагает простой и интуитивно
+                            понятный
+                            интерфейс.
+                        </p>
+                    </div>
+                    <div class="conten px-3">
+                        <p>
+                            Система контроля версий Mercurial — это набор написанных на языке Python скриптов,
+                            позволяющих сохранять различные версии кода в репозиториях. Причем в качестве
+                            физического
+                            хранилища можно использовать абсолютно любую аппаратную платформу, не обязательно
+                            отдельный
+                            выделенный сервер, как это реализовано в другой популярной системе управления версиями
+                            GitHub. Репозиториев можно создавать неограниченное (точнее, на сколько хватит
+                            свободного
+                            места) количество как на своем собственном ПК, так и на компьютерах других
+                            пользователей.
+                            Также в Mercurial есть возможность обмениваться версиями с другими разработчиками,
+                            синхронизировать изменения и т. д.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light " id="Topic-2">Рабочий процесс в
+                        Mercurial версий</h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <p class="px-3">
+                            Работа с версиями исходного кода происходит следующим образом:
+                        </p>
+                        <div class="content pt-5">
+                            <ul>
+                                <li>На личном ПК пользователь создает новый локальный репозиторий — либо открывает
+                                    новый, либо клонирует уже имеющийся.</li>
+                                <li>В каталоге созданного репозитория осуществляется редактирование, добавление или
+                                    удаление файлов.</li>
+                                <li>В локальном хранилище фиксируются изменения, внесенные в файлы.</li>
+                                <li>Далее этапы 2 и 3 осуществляются столько раз, сколько необходимо для выполнения
+                                    задачи.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="columns">
+                <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <figure class="image is-4by3">
+                        <img src="assets/mercurial-image.png" alt="programmers">
+                    </figure>
+                    <div class="content px-3">
+                        <li>Из локальных репозиториев, размещенных на ПК других пользователей, извлекаются и
+                            переносятся сделанные ими изменения, которые синхронизируются с теми, которые внес
+                            первый разработчик.</li>
+                        <li>Пользователь также может сам отдать внесенные им в программный код изменения другим
+                            разработчикам.</li>
+                        <p class="pt-5">
+                            Общий механизм работы Mercurial подразумевает, что любые изменения, внесенные в код,
+                            даже
+                            если они бесполезны, сохраняются как на локальном, так и на внешних репозиториях. Однако
+                            разработчику действительно часто необходимо редактировать или удалять эти изменения.
+                            Поэтому
+                            в Mercurial реализовано локальное изменение истории, которое не затрагивает внешние
+                            репозитории. Сделано это потому, что ревизии кода, сохраненные на них, могут
+                            использоваться
+                            в работе другими разработчиками, давать начало новым ветвям изменений. Чтобы
+                            отслеживание
+                            публичности и приватности изменений было удобным для пользователей, в Mercurial
+                            задействована система фаз. Всего их три:
+                        </p>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><strong class="has-text-primary-light">Public (публичная)</strong> — к этой фазе
+                                относятся изменения, уже опубликованные во внешних
+                                репозиториях, из-за чего редактировать их нельзя.</li>
+                            <li><strong class="has-text-primary-light">Draft (черновик)</strong> — это локальный
+                                набор изменений, который пока никуда не
+                                отправлялся,
+                                из-за чего его еще можно изменять — до первой публикации во внешних репозиториях,
+                                автоматически переводящей его в фазу public.</li>
+                            <li><strong class="has-text-primary-light">Secret (секретная)</strong> — к этой фазе
+                                пользователь вручную относит те изменения, которые
+                                он
+                                по какой-либо причине не хочет публиковать (редактировать их можно свободно).</li>
+                        </ul>
+                    </div>
+                    <div class="content  px-3">
+                        <p>
+                            То есть, когда пользователь только создает набор изменений, они имеют статус Draft. Как
+                            было сказано выше, в Mercurial предусмотрена как ручная, так и автоматическая публикация
+                            ревизий во внешних репозиториях. Как только это происходит, изменения получают статус
+                            Public и менять их уже нельзя. Если пользователь хочет в течение какого-то времени
+                            локально работать с этими изменениями или иметь возможность вернуться к ним в будущем,
+                            то ему нужно явно придать им статус Secret.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue8.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-3">Каталог изменений
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content px-3">
+                            <p>
+                                Изменения в Mercurial называются коммитами (commit) и представляют собой своеобразные
+                                «снимки состояния» исходного кода. То есть система не сохраняет каждый раз сам
+                                программный
+                                код, а фиксирует только его изменения, что позволяет уменьшить размер файлов в
+                                репозитории.
+                            </p>
+                        </div>
+                        <div class="content px-3">
+                            <p>
+                                Сами ревизии, сделанные пользователем, сохраняются в виде сетевой структуры
+                                взаимосвязанных
+                                друг с другом позиций (графов). Для ориентации самой Mercurial внутри этого множества
+                                наборов изменений используется система идентификаторов, включающая:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="columns">
+                <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content">
+                        <ul>
+                            <li><strong class="has-text-primary-light">Номер ревизии</strong>. Это целое число
+                                (от 0
+                                и более), показывающее порядок
+                                добавления в
+                                репозиторий. Система присваивает ревизии номер автоматически и с помощью него
+                                идентифицирует конкретный набор изменений. Для одного и того же набора ревизий,
+                                хранящихся в разных клонах репозитория, этот идентификатор может отличаться.
+                                Например, в обозначении 4:e1be1898f374 номер ревизии указан перед двоеточием.
+                            </li>
+                            <li><strong class="has-text-primary-light">Идентификатор набора изменений</strong>.
+                                Это
+                                SHA-1-хеш, состоящий из цифр и
+                                букв a, b, c, d, e, f. Система генерирует его для каждого набора изменений также
+                                автоматически, вычисляя на основе их содержимого. Поэтому данный идентификатор
+                                принадлежит одному и тому же набору изменений во всех хранилищах. Риск того, что
+                                один SHA-1-хеш будет обозначать два разных набора ревизий, крайне невелик. </li>
+                            <li>Так как идентификатор представляет собой достаточно длинную последовательность
+                                цифр
+                                и букв, в Mercurial предусмотрена возможность не вводить полную строку при
+                                выполнении команд. Достаточно указать лишь первые несколько символов, однозначно
+                                идентифицирующих конкретный набор ревизий. Если введенных знаков будет
+                                недостаточно,
+                                система оповестит об этом пользователя. В примере обозначения 4:e1be1898f374
+                                идентификатор указывается после двоеточия.</li>
+                            <li><strong class="has-text-primary-light">Метки (теги)</strong>. Это символическое
+                                имя,
+                                которое присваивается каждому
+                                набору изменений
+                                в дополнение к номерам и идентификаторам. У одного набора ревизий может быть
+                                одна
+                                или несколько меток. Имя тега не может содержать некоторые символы — в
+                                частности,
+                                двоеточие, которое используется в обозначении ревизий для разделения между
+                                идентификатором и номером. Если пользователь применил в теге недопустимый
+                                символ,
+                                система сразу же оповестит об этом.</li>
+                            <li><strong class="has-text-primary-light">Название ветки</strong>. Оно
+                                идентифицирует
+                                не конкретный набор изменений, а
+                                их ветку, то
+                                есть побочную группу графов в структуре каталога. Название ветки присваивается
+                                ей
+                                при создании и никогда не изменяется.</li>
+                        </ul>
+                    </div>
+                </div>
+                <figure class="image is-2by1 mt-3">
+                    <img src="assets/mercurial-catalog-image.png" alt="programmers">
+                </figure>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="section changeWidth">
+        <div class="container  px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-4">Команды в
+                    Mercurial</h1>
+            </div>
+            <div class="columns">
+                <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content px-3">
+                        <p>
+                            Для работы с версиями программного кода и их изменениями в Mercurial используются
+                            следующие
+                            команды
+                        </p>
+                        <div class="content">
+                            <ul>
+                                <li><strong class="has-text-primary-light">Работа с репозиторием</strong>: hg init —
+                                    создает новое хранилище в текущей
+                                    директории; hg clone — клонирует его; hg pull — извлекает ревизии из
+                                    репозитория; hg
+                                    push — пересылает изменения на сервер.</li>
+                                <li><strong class="has-text-primary-light">Работа с ветками</strong>: hg branch —
+                                    создает новую и дает ей название; hg
+                                    branches —
+                                    показывает все текущие; hg branch — отображает ту, в которой расположена рабочая
+                                    копия; hg heads — демонстрирует головные изменения в существующих ветках; hg
+                                    update
+                                    — обновляет рабочую директорию до уровня, зафиксированного в головной ревизии,
+                                    hg
+                                    merge — объединяет текущую ревизию с головной в указанной ветке.</li>
+                                <li><strong class="has-text-primary-light">Работа с тегами</strong>: hg tag —
+                                    присваивает метку текущей ветке
+                                    изменений.</li>
+                                <li><strong class="has-text-primary-light">Работа с изменениями</strong>: hg commit
+                                    —
+                                    фиксирует текущее состояние
+                                    программного кода,
+                                    сохраняя ревизии в репозитории.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content px-3">
+                        <p>
+                            Так как основной инструмент работы с Mercurial — это консоль, она продумана таким
+                            образом,
+                            что название любой команды можно сокращать для удобства. Однако делать это можно только
+                            до
+                            того момента, пока название команды остается однозначным:
+                        </p>
+                        <div class="content">
+                            <ul>
+                                <li>К примеру, вместо hg commit можно использовать сокращения hg commi, hg comm или
+                                    hg
+                                    com. Однако при введении hg c Mercurial откажет в выполнении и сообщит, что
+                                    «команда
+                                    c неоднозначна», так как это имя может обозначать несколько директив.</li>
+                                <li>Другой пример: применять директиву hg co для сокращенного обозначения hg commit
+                                    тоже
+                                    нельзя, так как она является псевдонимом для hg update. В то же время для
+                                    команды hg
+                                    commit можно использовать сокращение hg ci.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-5">Источники</h1>
+                </div>
+
+                <!-- cards -->
+                <section class="section">
+                    <div class="container">
+                        <div class="columns is-centered is-8 is-variable is-multiline">
+                            <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
+                                <div class="card has-background-link">
+                                    <div class="card-content">
+                                        <ol class="ml-5 has-text-white">
+                                            <li><a class="has-text-white" href="https://habr.com/ru/articles/108658/">Hg
+                                                    Init: Часть 2. Основы
+                                                    Mercurial</a><br></li>
+                                            <li><a class="has-text-white" href="https://habr.com/ru/articles/108904/">Hg
+                                                    Init: Часть 3. Привыкаем
+                                                    работать в команде</a><br></li>
+                                            <li><a class="has-text-white"
+                                                    href="https://www.mercurial-scm.org/">Официальный
+                                                    сайт</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pagination -->
+                <section class="section">
+                    <div class="container" style="top: 50px;">
+                        <div class="box paginationStyle">
+                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                                <a href="subversion-tutorial.html" class="pagination-previous">Назад</a>
+                                <a href="mercurial-tutorial.html" class="pagination-next">Вперед</a>
+                                <ul class="pagination-list">
+                                    <li><a href="index.html" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="subversion-tutorial.html" class="pagination-link"
+                                            aria-label="Goto page 1">5</a></li>
+                                    <li><a href="#" class="pagination-link is-current" aria-label="Goto page 47">6</a>
+                                    <li><a href="mercurial-tutorial.html" class="pagination-link"
+                                            aria-label="Goto page 47">7</a>
+                                    <li><a href="comparison.html" class="pagination-link"
+                                            aria-label="Goto page 45">8</a>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="modal-1">
+        <div class="modal-background" id="contact-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">Контактная информация</h3>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Владелец: Широков Глеб Вадимович
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Прямой городской номер +8932342444
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Телефон по все России +89425255252
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="modal-2">
+        <div class="modal-background" id="about-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">О нас</h3>
+            <p class="is-size-5 has-text-white">Данный сайт был создан с целью публикации информации на различные темы.
+                Здесь вы можете
+                найти полезные
+                статьи, советы и рекомендации по самым разнообразным вопросам. Наша цель - делиться знаниями и помогать
+                посетителям узнавать новое и интересное. Благодарим вас за посещение сайта и надеемся, что вы найдете
+                здесь то, что вас заинтересует!
+            </p>
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
+
+    <!-- Footer -->
+    <footer class="footer has-background-link">
+        <div class="content has-text-centered">
+            <section class="section changeWidth">
+                <div class="container">
+                    <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права защищены.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

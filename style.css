@@ -1,0 +1,54 @@
+.menu {
+  position: fixed;
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  top: 100px;
+  right: 0;
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+
+.bg {
+  /* background: linear-gradient(to right, rgb(3, 3, 167), rgb(75, 137, 196)); */
+  background: radial-gradient(rgb(3, 3, 167), rgb(102, 171, 236));
+}
+
+.titleBg {
+  background-color: rgba(17, 17, 138, 0.5);
+}
+
+.cardBg {
+  background: linear-gradient(to right, rgb(0, 0, 255), rgb(167, 167, 167));
+  height: 100%;
+}
+
+.paginationStyle{
+  background-color: rgba(116, 116, 238, 0.568);
+}
+
+@media (max-width: 1920px) {
+  .menu {
+    right: 50px;
+  }
+
+  .changeWidth {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .menu {
+    right: 0px;
+  }
+
+  .changeWidth {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1026px) {
+  .changeWidth {
+    width: 100%;
+  }
+}

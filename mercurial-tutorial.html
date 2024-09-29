@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Mercurial-tutorial</title>
+    <script defer src="https://use.fontawesome.com/releases/v6.6.0/js/all.js"></script>
+</head>
+
+<body class="bg">
+    <header>
+        <section class="hero is-fullheight"
+            style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
+            <!-- navbar -->
+            <nav class="navbar is-soft is-fixed-top has-background-link">
+                <div class="navbar-brand">
+                    <a class="navbar-burger has-text-white" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="navbar-menu has-background-link" id="nav-links">
+                    <div class="navbar-start py-3 px-3">
+                        <h3 class="title is-size-1 has-text-primary-light">Control Tree</h3>
+                    </div>
+                    <div class="navbar-end px-3">
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="contacts"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </span>
+                            <span>Контактная информация</span>
+                        </a>
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            href="#">
+                            <span class="icon is-small">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <span>О нас</span>
+                        </a>
+                        <!-- Header-topic for mobile -->
+                        <div class="container is-hidden-desktop">
+                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-1">Установка</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-2">Основы Mercurial</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-3">Откаты, статусы</a>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                                href="#Topic-4">Источники</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Title -->
+            <div class="hero-body">
+                <div class="">
+                    <div class="containter pl-6">
+                        <p class="title is-size-1 has-text-primary-light">Mercurial - быстрый старт</p>
+                        <p class="subtitle is-primary-invert">подготовлено редакций сайта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- BreadCrumbs -->
+    <section class="section pb-0 changeWidth">
+        <div class="container">
+            <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html" class="has-text-info">Системы контроля версий</a></li>
+                    <li><a href="mercurial.html" class="has-text-info">Mercurial</a></li>
+                    <li class="is-active"><a class="has-text-grey" href="#" aria-current="page">Mercurial - быстрый
+                            старт</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- side bar for desks/tablets -->
+    <div class="is-widescreen is-hidden-touch is-desktop bg1">
+        <aside class="menu" id="menu">
+            <div class="box has-background-link">
+                <p class="menu-label has-text-primary-light is-size-4">
+                    Содержание
+                </p>
+                <ul class="menu-list is-size-5">
+                    <li><a class="is-active is-primary" class="has-background-white" href="#Topic-1">Установка</a>
+                    </li>
+                    <li><a href="#Topic-2">Основы Mercurial</a></li>
+                    <li><a href="#Topic-3">Откаты, статусы</a></li>
+                    <li><a href="#Topic-4">Источники</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Content -->
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="box titleBg">
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-1">Установка
+                </h1>
+                <!-- Breadcrumb -->
+                <div class="box is-three-quarters has-background-link">
+                    <div class="subtitle is-justify-content-center is-flex p-5">
+                        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-solid fa-calendar-days"></i>
+                                        </span>
+                                        <span class="has-text-white">Дата создания 23.09.2024</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small has-text-white"><i
+                                                class="fa-regular fa-clock"></i></i>
+                                        </span>
+                                        <span class="has-text-white">5 мин. чтения</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="share">
+                                        <span class="icon is-small has-text-white"><i class="fa-solid fa-share"></i>
+                                        </span>
+                                        <span class="has-text-white">Поделиться</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Systems cards -->
+            <section class="section">
+                <div class="container">
+                    <div class="columns is-centered is-8 is-variable is-multiline">
+                        <div class="column">
+                            <div class="card cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-linux"></i>
+                                        </span>
+                                        <span>Linux</span>
+                                    </p>
+                                    <p class="is-size-5 has-text-centered has-text-white">
+                                        apt-get install mercurial
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://www.mercurial-scm.org/downloads"
+                                        class="card-footer-item has-text-white">Официальный сайт</a>
+                                </footer>
+
+                            </div>
+                        </div>
+                        <div class="column ">
+                            <div class="card cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-apple"></i>
+                                        </span>
+                                        <span>Mac</span>
+                                    </p>
+                                    <p class="is-size-5 is-size-5 has-text-centered has-text-white">
+                                        brew install mercurial
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://www.mercurial-scm.org/downloads"
+                                        class="card-footer-item has-text-white">Официальный сайт</a>
+                                </footer>
+
+                            </div>
+                        </div>
+                        <div class="column ">
+                            <div class="card cardBg">
+                                <div class="card-content is-size-5 has-text-centered">
+                                    <p class="title is-size-5">
+                                        <span class="icon is-small">
+                                            <i class="fa-brands fa-windows"></i>
+                                        </span>
+                                        <span>Windows</span>
+                                    </p>
+                                    <p class="is-size-5 is-size-5 has-text-centered has-text-white">
+                                        Скачивание с сайта
+                                    </p>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://www.mercurial-scm.org/downloads"
+                                        class="card-footer-item has-text-white">Официальный сайт</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-2">Основы Mercurial
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content  mx-3">
+                            <p>
+                                Mercurial — это система контроля версий. Разработчики используют ее для
+                                администрирования
+                                исходного кода. У нее два основных назначения:
+                            <ol>
+                                <li>Она хранит все предыдущие версии каждого файла</li>
+                                <li>Она может объединить разные версии вашего кода, то есть сотрудники могут независимо
+                                    работать над кодом и затем объединять свои изменения</li>
+                            </ol>
+                            <div>Без Mercurial вы могли бы попытаться сохранить предыдущие версии,
+                                просто создавая много
+                                копий каталога с кодом:</div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <section class="section pt-0 pb-0">
+
+                    <figure class="image is-2by1">
+                        <img src="assets/mercurial-image-1.png" />
+                    </figure>
+
+                </section>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <div class="content mx-3 mt-5">
+                        Это муторно, требует много места на диске и создает путаницу. Лучше использовать систему
+                        контроля версий.
+                        <br><br>
+                        Большинство людей работают с Mercurial через интерфейс командной строки. Так можно работать
+                        в Windows, Unix, и Mac. Команда для Mercurial — это hg:
+                    </div>
+
+                    <figure class="image">
+                        <img src="assets/mercurial-image-2.png" />
+                    </figure>
+
+                    <div class="content mx-3">
+                        <p>
+                            Если выполнить hg без параметров, то вы получите список наиболее часто используемых
+                            команд. Вы можете также попробовать выполнить hg help для получения полного списка
+                            команд.
+                        <div>Для того чтобы воспользоваться преимуществами контроля версий, вам
+                            нужен репозиторий. Репозиторий хранит все предыдущие версии всех ваших файлов. На самом
+                            деле, для экономии места на диске, все предыдущие версии не будут храниться — будет
+                            храниться только компактный список изменений.</div>
+                        </p>
+                    </div>
+                    <div class="content mx-3">
+                        В старые времена заиметь репозиторий было большим делом. Вам было необходимо иметь
+                        центральный сервер и нужно было установить на него программное обеспечение. Mercurial —
+                        распределенная система, так что вы можете использовать ее без модного центрального сервера.
+                        Вы можете пользоваться Mercurial, используя один только свой компьютер. А заполучить
+                        репозиторий супер просто: вы просто идете в каталог с вашим кодом…
+                    </div>
+
+                    <figure class="image">
+                        <img src="assets/mercurial-image-3.png" />
+                    </figure>
+
+                    <div class="content mx-3">
+                        и выполняете команду hg init:
+                    </div>
+
+                    <figure class="image">
+                        <img src="assets/mercurial-image-4.png" />
+                    </figure>
+
+                    <div class="content mx-3">
+                        hg init создает репозиторий
+                    </div>
+                    <div class="content mx-3">
+                        <p>
+                            Это и есть репозиторий! Это каталог со всем, что нужно Mercurial для работы. Настройки,
+                            предыдущие версии файлов, теги, лишняя пара носков на случай дождя, и прочее. Не лазьте
+                            туда. Вам почти всегда не стоит возиться с этим каталогом самостоятельно.
+                            <br><br>
+                            Ну хорошо, раз у нас теперь есть свежеиспеченный репозиторий, то мы захотим добавить в
+                            него все исходные файлы. Это тоже просто: нужно лишь выполнить hg add.
+                        </p>
+                    </div>
+                    <div class="content mx-3">
+                        В старые времена заиметь репозиторий было большим делом. Вам было необходимо иметь
+                        центральный сервер и нужно было установить на него программное обеспечение. Mercurial —
+                        распределенная система, так что вы можете использовать ее без модного центрального сервера.
+                        Вы можете пользоваться Mercurial, используя один только свой компьютер. А заполучить
+                        репозиторий супер просто: вы просто идете в каталог с вашим кодом…
+                    </div>
+
+                    <figure class="image pb-5">
+                        <img src="assets/mercurial-image-5.png" />
+                    </figure>
+
+                    <div class="box has-background-link has-text-white ">
+                        hg add
+                    </div>
+                    <div class="mx-3">
+                        - помечает файлы как запланированные для добавления в репозиторий. Файлы на самом деле не
+                        будут добавлены до тех пор, пока вы не зафиксируете изменения.
+                    </div>
+                    <div class="content mx-3">
+                        Остался еще один шаг… вам нужно зафиксировать ваши изменения. Какие изменения? Факт
+                        добавления всех этих файлов.
+                    </div>
+                    <div class="box has-background-link has-text-white mx-3">
+                        hg commit
+                    </div>
+                    <div class="mx-3">
+                        - сохраняет текущее состояние всех файлов в репозиторий.
+                    </div>
+
+                    <figure class="image py-5 pb-0">
+                        <img src="assets/mercurial-image-6.png" />
+                    </figure>
+
+                    <div class="content mx-3">
+                        Mercurial запустит редактор для того, чтобы вы могли напечатать комментарий к изменениям.
+                        Вам нужно просто написать что-нибудь, что напомнит вам о сделанных изменениях.
+                    </div>
+
+                    <figure class="image py-5">
+                        <img src="assets/mercurial-image-7.png" />
+                    </figure>
+
+                    <div class="content mx-3">
+                        <div class="content mx-3">
+                            После сохранения и выхода из редактора ваши изменения будут зафиксированы.
+                            <br><br>
+                            Вы можете выполнить hg log для просмотра истории изменений. Это как блог для вашего
+                            репозитория:
+                        </div>
+                    </div>
+
+                    <figure class="image py-5">
+                        <img src="assets/mercurial-image-8.png" />
+                    </figure>
+                    <div class="box has-background-link has-text-white mx-3">
+                        hg log
+                    </div>
+                    <div class="mx-3">
+                        - отображает историю изменений, зафиксированных в репозитории.
+                        <br><br>
+                        Давайте изменим файл и посмотрим, что получится.
+                    </div>
+
+                    <figure class="image py-5">
+                        <img src="assets/mercurial-image-9.png" />
+                    </figure>
+
+                    <div class="mx-3">
+                        Так как мы сделали изменение, то можем его зафиксировать при помощи hg commit:
+                    </div>
+
+                    <figure class="image py-5">
+                        <img src="assets/mercurial-image-10.png" />
+                    </figure>
+
+                    <div class="mx-3">
+                        Обратите внимание, что Mercurial догадался, что только один файл, a.txt, изменен:
+                    </div>
+
+                    <figure class="image py-5">
+                        <img src="assets/mercurial-image-11.png" />
+                    </figure>
+
+                    <div class="mx-3">
+                        А теперь, после того как я закоммитил (зафиксировал изменения), давайте посмотрим на
+                        историю:
+                    </div>
+
+                    <figure class="image py-5">
+                        <img src="assets/mercurial-image-12.png" />
+                    </figure>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue4.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-3">Откаты, статусы
+                    </h1>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                        <div class="content">
+                            <p class=" mx-3">
+                                Благодаря Mercurial, если вам не нравится то, что вы сделали, вы можете выполнить
+                                удобную команду hg revert, которая немедленно вернет ваш каталог к виду, в котором он
+                                был в момент последнего коммита.
+                            </p>
+
+                            <figure class="image py-5">
+                                <img src="assets/mercurial-image-13.png" />
+                            </figure>
+
+                            <div class="box has-background-link has-text-white">
+                                hg revert
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section changeWidth">
+        <div class="container px-6">
+            <div class="columns">
+                <div class="column has-text-white has-text-justifie is-size-6-mobile is-size-4-desktop">
+                    <div class="content">
+                        <div class="mx-3">
+                            - возвращает измененные файлы к зафиксированному в репозитории виду.
+                            <br><br>
+                            Таким образом, когда вы работаете над исходным кодом, используя Mercurial, вы:
+                            <ol class="mb-5">
+                                <li>Делаете изменения</li>
+                                <li>Оцениваете, подходят ли они</li>
+                                <li>Если подходят, то выполняете commit</li>
+                                <li>Если не подходят, то выполняете revert</li>
+                                <li>GOTO 1</li>
+                            </ol>
+                        </div>
+                        <div class="mx-3">
+                            Со временем вы можете забыть, на чем остановились и что поменяли с момента прошлого
+                            коммита. Mercurial отслеживает все это для вас. Все что вам нужно, это выполнить hg
+                            status и Mercurial даст вам список измененных файлов.
+                        </div>
+                        <div class="box my-5 has-background-link has-text-white">
+                            hg status
+                        </div>
+                        <div class="mx-3">
+                            - отображает список измененных файлов.
+                            <br><br>
+                            Предположим, я создал один файл, отредактировал другой и удалил третий.
+                        </div>
+
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-14.png" />
+                        </figure>
+
+                        <div class="mx-3">
+                            hg status отображает список измененных файлов, добавляя значок в начале каждой строки.
+                            Этот значок сообщает о том, что же произошло. «M» означаете «Modified» — файл был
+                            изменен. "!" означает отсутствие — файл должен быть здесь, но куда-то делся. "?"
+                            означает что, состояние не определено — Mercurial ничего не знает про этот файл. Пока не
+                            знает.
+                        </div>
+                        <div class="box has-background-link has-text-white my-5">
+                            hg diff
+                        </div>
+                        <div class=" mx-3">
+                            - показывает, что изменилось в файле.
+                        </div>
+
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-15.png" />
+                        </figure>
+
+                        <div class="content mx-3">
+                            <p>При каждом удалении (или добавлении) файла вы обязаны сообщить об этом событии
+                                Mercurial.</p>
+                        </div>
+                        <div class="box has-background-link has-text-white">
+                            hg remove
+                        </div>
+                        <div class=" mx-3">
+                            - помечает файлы как запланированные для удаления из репозитория. Файлы на диске не
+                            будут удалены до тех пор, пока вы не зафиксируете изменения.
+                        </div>
+
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-16.png" />
+                        </figure>
+
+                        <div class="mx-3">
+                            «R» означает «Removed», то есть, помечен для удаления. Во время следующего коммита
+                            Mercurial удалит этот файл. (История для этого файла сохранится в репозитории, так что,
+                            конечно, мы всегда сможем получить его назад.) И, наконец, нужно добавить этот новый
+                            файл b.txt:
+                        </div>
+
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-17.png" />
+                        </figure>
+
+                        <div class="mx-3">
+                            «A» означает «Added», то есть, помечен для добавления. Заметили, что я разленился писать hg
+                            status каждый раз? Для Mercurial достаточно минимального набора букв, однозначно
+                            определяющего команду, а на st начинается только одна команда.
+                            <br><br>
+                            Разобравшись с вопросиками и восклицательными знаками, я могу продолжить и внести изменения:
+                        </div>
+                        <section class="section pt-0 pb-0">
+                            <section class="section pt-0 pb-0">
+                                <figure class="image py-5">
+                                    <img src="assets/mercurial-image-18.png" />
+                                </figure>
+                            </section>
+                        </section>
+                        <p class="mx-3">
+                            На что еще стоит обратить внимание в выводе hg log: строка changeset отображает номер
+                            каждого коммита. На самом деле даже два номера: короткий удобный вроде «0» для первой
+                            ревизии и длинный непонятный шестнадцатеричный, на который вы можете пока не обращать
+                            внимания.
+                            <br><br>
+                            Запомните, что Mercurial хранит в репозитории достаточно информации для воссоздания любой
+                            версии любого файла.
+                            <br><br>
+                            Прежде всего, при помощи простой команды hg cat вы можете вывести содержимое любой версии
+                            любого файла в консоль. К примеру, вот как увидеть, что сейчас находится в файле a.txt:
+                        </p>
+
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-19.png" />
+                        </figure>
+
+                        <div class="box has-background-link has-text-white">
+                            hg cat
+                        </div>
+                        <div class="mx-3">
+                            - отображает содержимое любого файла для любой ревизии.
+                        </div>
+                        <div class="content mx-3">
+                            <p>Для того чтобы увидеть как файл выглядел раньше, я могу просто указать нужный номер
+                                набора изменений (changeset из лога) при помощи аргумента -r («revision», то есть
+                                ревизия):</p>
+                        </div>
+
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-20.png" />
+                        </figure>
+
+                        <div class="mx-3">
+                            Если у файла сложное содержимое или большая длина, а изменился он лишь немного, то я могу
+                            использовать команду hg diff с аргументом r для вывода разницы между двумя ревизиями. К
+                            примеру, вот как посмотреть разницу между ревизиями 0 и 1:
+                        </div>
+
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-21.png" />
+                        </figure>
+
+                        <div class="mx-3">
+                            И наконец,- надеюсь, что вы еще не свалились от усталости,- прежде чем закончить эту часть,
+                            я хочу показать вам еще одну маленькую фишку: при помощи команды hg update вы можете
+                            перемещаться вперед и назад ко времени создания любой ревизии. Ну, по сути в будущее вы
+                            перемещаться не сможете, хотя это было бы супер круто, да. Вы, имея всего четыре ревизии,
+                            смогли бы выполнить hg update -r 103994 и получить реально крутую версию ваших исходников. С
+                            гравицапой и прочими футуристическими штучками. Но, конечно, это невозможно.
+                            <br><br>
+                            Что на самом деле возможно, так это вернуться к любой ревизии. Следите за руками:
+                        </div>
+
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-22.png" />
+                        </figure>
+
+                        <div class="box has-background-link has-text-white">
+                            hg update
+                        </div>
+                        <div class="mx-3">
+                            - приводит рабочий каталог к состоянию, как у заданной ревизии.
+                        </div>
+                        <p class="mx-3">
+                            Фактически, для перемещении вперед и назад между ревизиями hg update вносит в файлы
+                            запомненные изменения. Если файл был добавлен или удален, то эта команда добавляет или
+                            удаляет его на диске. Выполнение hg update без дополнительных параметров приводит рабочий
+                            каталог к состоянию как у самой свежей ревизии.
+                            <br><br>
+                            Вот все, что вы должны уметь делать на данный момент:
+                        </p>
+                        <div class="content">
+                            <ol class="mt-3">
+                                <li>Создать репозиторий</li>
+                                <li>Добавить или удалить файлы из репозитория</li>
+                                <li>После внесения изменений просмотреть, что было сделано, а затем</li>
+                                <li>зафиксировать изменения, если они вам нравятся</li>
+                                <li>или откатить изменения, если не нравятся</li>
+                                <li>Просмотреть предыдущие версии файлов или привести рабочий каталог к состоянию как у
+                                    некоторой ревизии.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic -->
+    <section class="hero is-fullheight"
+        style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
+        <section class="section changeWidth">
+            <div class="container  px-6">
+                <div class="box titleBg">
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-4">Источники</h1>
+                </div>
+
+                <!-- cards -->
+                <section class="section">
+                    <div class="container">
+                        <div class="columns is-centered is-8 is-variable is-multiline">
+                            <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
+                                <div class="card has-background-link">
+                                    <div class="card-content">
+                                        <ol class="ml-5 has-text-white">
+                                            <li><a class="has-text-white" href="https://habr.com/ru/articles/108658/">Hg
+                                                    Init: Часть 2. Основы
+                                                    Mercurial</a><br></li>
+                                            <li><a class="has-text-white" href="https://habr.com/ru/articles/108904/">Hg
+                                                    Init: Часть 3. Привыкаем
+                                                    работать в команде</a><br></li>
+                                            <li><a class="has-text-white"
+                                                    href="https://www.mercurial-scm.org/">Официальный
+                                                    сайт</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pagination -->
+                <section class="section">
+                    <div class="container" style="top: 50px;">
+                        <div class="box paginationStyle">
+                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                                <a href="mercurial.html" class="pagination-previous">Назад</a>
+                                <a href="comparison.html" class="pagination-next">Вперед</a>
+                                <ul class="pagination-list">
+                                    <li><a href="index.html" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                                    <li><span class="pagination-ellipsis has-text-white">&hellip;</span></li>
+                                    <li><a href="mercurial.html" class="pagination-link" aria-label="Goto page 45">6</a>
+                                    </li>
+                                    <li><a href="mercurial-tutorial.html" class="pagination-link is-current"
+                                            aria-label="Goto page 47">7</a>
+                                    <li><a href="comparison.html" class="pagination-link"
+                                            aria-label="Goto page 45">8</a>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="modal-1">
+        <div class="modal-background" id="contact-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">Контактная информация</h3>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Владелец: Широков Глеб Вадимович
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Прямой городской номер +8932342444
+                </div>
+            </div>
+            <div class="container">
+                <div class="has-text-white is-size-5">
+                    Телефон по все России +89425255252
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="modal-2">
+        <div class="modal-background" id="about-bg"></div>
+        <div class="modal-content bg py-5 px-5">
+            <h3 class="title mb-6 is-size-1">О нас</h3>
+            <p class="is-size-4 has-text-white">Данный сайт был создан с целью публикации информации на различные темы.
+                Здесь вы можете
+                найти полезные
+                статьи, советы и рекомендации по самым разнообразным вопросам. Наша цель - делиться знаниями и помогать
+                посетителям узнавать новое и интересное. Благодарим вас за посещение сайта и надеемся, что вы найдете
+                здесь то, что вас заинтересует!</p>
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
+
+    <!-- Footer -->
+    <footer class="footer has-background-link">
+        <div class="content has-text-centered">
+            <section class="section changeWidth">
+                <div class="container">
+                    <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права защищены.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
