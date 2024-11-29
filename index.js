@@ -11,7 +11,7 @@ const contactsButton = document.querySelector("#contacts");
 const modalContacts = document.querySelector("#modal-1");
 const contactsBg = document.querySelector("#contact-bg");
 
-const aboutButton = document.querySelector("#about");
+const aboutButton = document.querySelector("#about-link");
 const modalAbout = document.querySelector("#modal-2");
 const aboutBg = document.querySelector("#about-bg");
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 <body class="bg">
     <header>
-        <section class="hero is-fullheight"
+        <div class="hero is-fullheight"
             style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
             <!-- navbar -->
             <nav class="navbar is-soft is-fixed-top has-background-link">
@@ -37,7 +37,7 @@
                             </span>
                             <span>Контактная информация</span>
                         </a>
-                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about-link"
                             href="#">
                             <span class="icon is-small">
                                 <i class="fa-regular fa-address-card"></i>
@@ -46,16 +46,16 @@
                         </a>
                         <!-- Header-topic for mobile -->
                         <div class="container is-hidden-desktop">
-                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <div class="title is-size-1 has-text-primary-light">Содержание</div>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-1"
                                 href="#Topic-1">Определение</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-2"
                                 href="#Topic-2">Рабочий процесс</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-3"
                                 href="#Topic-3">Каталог изменений</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-4"
                                 href="#Topic-4">Команды в Mercurial</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-5"
                                 href="#Topic-5">Источники</a>
                         </div>
                     </div>
@@ -70,11 +70,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </header>
 
     <!-- BreadCrumbs -->
-    <section class="section pb-0 changeWidth">
+    <div class="section pb-0 changeWidth">
         <div class="container">
             <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
                 <ul>
@@ -83,7 +83,7 @@
                 </ul>
             </nav>
         </div>
-    </section>
+    </div>
 
     <!-- side bar for desks/tablets -->
     <div class="is-widescreen is-hidden-touch is-desktop bg1">
@@ -93,7 +93,7 @@
                     Содержание
                 </p>
                 <ul class="menu-list is-size-5">
-                    <li><a class="is-active is-primary" class="has-background-white" href="#Topic-1">Определение</a>
+                    <li><a class="is-active is-primary" href="#Topic-1">Определение</a>
                     </li>
                     <li><a href="#Topic-2">Рабочий процесс</a></li>
                     <li><a href="#Topic-3">Каталог изменений</a></li>
@@ -105,7 +105,7 @@
     </div>
 
     <!-- Content -->
-    <section class="section changeWidth">
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="box titleBg">
                 <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-1">Mercurial</h1>
@@ -125,7 +125,7 @@
                                 <li>
                                     <a>
                                         <span class="icon is-small has-text-white"><i
-                                                class="fa-regular fa-clock"></i></i>
+                                                class="fa-regular fa-clock"></i>
                                         </span>
                                         <span class="has-text-white">5 мин. чтения</span>
                                     </a>
@@ -174,12 +174,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container  px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light " id="Topic-2">Рабочий процесс в
@@ -204,9 +204,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container  px-6">
             <div class="columns">
                 <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -214,11 +214,13 @@
                         <img src="assets/mercurial-image.png" alt="programmers">
                     </figure>
                     <div class="content px-3">
-                        <li>Из локальных репозиториев, размещенных на ПК других пользователей, извлекаются и
-                            переносятся сделанные ими изменения, которые синхронизируются с теми, которые внес
-                            первый разработчик.</li>
-                        <li>Пользователь также может сам отдать внесенные им в программный код изменения другим
-                            разработчикам.</li>
+                        <ul>
+                            <li>Из локальных репозиториев, размещенных на ПК других пользователей, извлекаются и
+                                переносятся сделанные ими изменения, которые синхронизируются с теми, которые внес
+                                первый разработчик.</li>
+                            <li>Пользователь также может сам отдать внесенные им в программный код изменения другим
+                                разработчикам.</li>
+                        </ul>
                         <p class="pt-5">
                             Общий механизм работы Mercurial подразумевает, что любые изменения, внесенные в код,
                             даже
@@ -263,12 +265,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue8.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container  px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -297,9 +299,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container  px-6">
             <div class="columns">
                 <div class="column is-desktop has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -350,17 +352,16 @@
                                 при создании и никогда не изменяется.</li>
                         </ul>
                     </div>
+                    <figure class="image is-2by1 mt-3">
+                        <img src="assets/mercurial-catalog-image.png" alt="programmers">
+                    </figure>
                 </div>
-                <figure class="image is-2by1 mt-3">
-                    <img src="assets/mercurial-catalog-image.png" alt="programmers">
-                </figure>
             </div>
         </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="section changeWidth">
+    <div class="section changeWidth">
         <div class="container  px-6">
             <div class="box titleBg">
                 <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -428,12 +429,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -441,7 +442,7 @@
                 </div>
 
                 <!-- cards -->
-                <section class="section">
+                <div class="section">
                     <div class="container">
                         <div class="columns is-centered is-8 is-variable is-multiline">
                             <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
@@ -463,12 +464,12 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
                 <!-- Pagination -->
-                <section class="section">
+                <div class="section">
                     <div class="container" style="top: 50px;">
                         <div class="box paginationStyle">
-                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                            <nav class="pagination is-centered is-two-thirds" aria-label="pagination">
                                 <a href="subversion-tutorial.html" class="pagination-previous">Назад</a>
                                 <a href="mercurial-tutorial.html" class="pagination-next">Вперед</a>
                                 <ul class="pagination-list">
@@ -482,15 +483,14 @@
                                     <li><a href="comparison.html" class="pagination-link"
                                             aria-label="Goto page 45">8</a>
                                     </li>
-                                    </li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </section>
-    </section>
+        </div>
+    </div>
 
     <!-- Contact Modal -->
     <div class="modal" id="modal-1">
@@ -535,12 +535,12 @@
     <!-- Footer -->
     <footer class="footer has-background-link">
         <div class="content has-text-centered">
-            <section class="section changeWidth">
+            <div class="section changeWidth">
                 <div class="container">
                     <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права защищены.
                     </p>
                 </div>
-            </section>
+            </div>
         </div>
     </footer>
 </body>

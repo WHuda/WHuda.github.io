@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 <body class="bg">
     <header>
-        <section class="hero is-fullheight"
+        <div class="hero is-fullheight"
             style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
             <!-- navbar -->
             <nav class="navbar is-soft is-fixed-top has-background-link">
@@ -36,7 +36,7 @@
                             </span>
                             <span>Контактная информация</span>
                         </a>
-                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about-link"
                             href="#">
                             <span class="icon is-small">
                                 <i class="fa-regular fa-address-card"></i>
@@ -45,26 +45,26 @@
                         </a>
                         <!-- Header-topic for mobile -->
                         <div class="container is-hidden-desktop">
-                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <div class="title is-size-1 has-text-primary-light">Содержание</div>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-1"
                                 href="#Topic-1">Введение</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-2"
                                 href="#Topic-2">Система одновременных версий (CVS)</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-3"
                                 href="#Topic-3">Apache Subversion (SVN)</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-4"
                                 href="#Topic-4">GIT</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-5"
                                 href="#Topic-5">Mercurial</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-6"
                                 href="#Topic-6">Что выбрать???</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-7"
                                 href="#Topic-7">Хостинг</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-8"
                                 href="#Topic-8">Графические клиенты</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-9"
                                 href="#Topic-9">Источники</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-10"
                                 href="#Topic-10">Заключение</a>
                         </div>
                     </div>
@@ -79,11 +79,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </header>
 
     <!-- BreadCrumbs -->
-    <section class="section pb-0 changeWidth">
+    <div class="section pb-0 changeWidth">
         <div class="container">
             <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
                 <ul>
@@ -93,7 +93,7 @@
                 </ul>
             </nav>
         </div>
-    </section>
+    </div>
 
 
     <!-- side bar for desks/tablets -->
@@ -104,7 +104,7 @@
                     Содержание
                 </p>
                 <ul class="menu-list is-size-5">
-                    <li><a class="is-active is-primary" class="has-background-white" href="#Topic-1">Введение</a>
+                    <li><a class="is-active is-primary" href="#Topic-1">Введение</a>
                     </li>
                     <li><a href="#Topic-2">Система одновременных версий (CVS)</a></li>
                     <li><a href="#Topic-3">Apache Subversion (SVN)</a></li>
@@ -121,7 +121,7 @@
     </div>
 
     <!-- Content -->
-    <section class="section changeWidth">
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="box titleBg">
                 <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -143,7 +143,7 @@
                                 <li>
                                     <a>
                                         <span class="icon is-small has-text-white"><i
-                                                class="fa-regular fa-clock"></i></i>
+                                                class="fa-regular fa-clock"></i>
                                         </span>
                                         <span class="has-text-white">5 мин. чтения</span>
                                     </a>
@@ -189,12 +189,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -217,9 +217,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -259,12 +259,13 @@
                     </div>
                 </div>
             </div>
-    </section>
+        </div>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -278,7 +279,7 @@
                             <div class="columns is-centered px-3">
                                 <div class="column">
                                     <figure class="image is-2by1">
-                                        <img src="assets/subversion_logo.png" />
+                                        <img src="assets/subversion_logo.png" alt="programmers">
                                     </figure>
                                 </div>
                                 <div class="column is-half-desktop">
@@ -296,9 +297,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -353,12 +354,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -371,7 +372,7 @@
                             <div class="columns is-centered px-3">
                                 <div class="column">
                                     <figure class="image is-2by1">
-                                        <img src="assets/git_logo.png" />
+                                        <img src="assets/git_logo.png" alt="programmers">
                                     </figure>
                                 </div>
                                 <div class="column is-half-desktop">
@@ -392,9 +393,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -430,12 +431,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue4.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -448,7 +449,7 @@
                             <div class="columns is-centered px-3">
                                 <div class="column">
                                     <figure class="image is-2by1">
-                                        <img src="assets/mercurial_logo.png" />
+                                        <img src="assets/mercurial_logo.png" alt="programmers">
                                     </figure>
                                 </div>
                                 <div class="column is-half-desktop">
@@ -465,9 +466,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -510,12 +511,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue5.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -539,9 +540,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -599,12 +600,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue7.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -626,9 +627,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -636,7 +637,7 @@
                         <div class="columns is-centered px-3">
                             <div class="column">
                                 <figure class="image is-2by1">
-                                    <img src="assets/beanstalk.png" />
+                                    <img src="assets/beanstalk.png" alt="programmers">
                                 </figure>
                             </div>
                             <div class="column is-half-desktop">
@@ -650,7 +651,7 @@
                         <div class="columns is-centered px-3">
                             <div class="column">
                                 <figure class="image is-2by1">
-                                    <img src="assets/unfuddle.png" />
+                                    <img src="assets/unfuddle.png" alt="programmers">
                                 </figure>
                             </div>
                             <div class="column is-half-desktop">
@@ -664,7 +665,7 @@
                         <div class="columns is-centered px-3">
                             <div class="column">
                                 <figure class="image is-2by1">
-                                    <img src="assets/sliksvn.png" />
+                                    <img src="assets/sliksvn.png" alt="programmers">
                                 </figure>
                             </div>
                             <div class="column is-half-desktop">
@@ -677,7 +678,7 @@
                         <div class="columns is-centered px-3">
                             <div class="column">
                                 <figure class="image is-2by1">
-                                    <img src="assets/xp-dev.png" />
+                                    <img src="assets/xp-dev.png" alt="programmers">
                                 </figure>
                             </div>
                             <div class="column is-half-desktop">
@@ -691,12 +692,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue4.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -715,9 +716,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
@@ -725,7 +726,7 @@
                         <div class="columns is-centered px-3">
                             <div class="column">
                                 <figure class="image is-2by1">
-                                    <img src="assets/tortoise-svn.png" />
+                                    <img src="assets/tortoise-svn.png" alt="programmers">
                                 </figure>
                             </div>
                             <div class="column is-half-desktop">
@@ -741,7 +742,7 @@
                         <div class="columns is-centered px-3">
                             <div class="column">
                                 <figure class="image is-2by1">
-                                    <img src="assets/smartGit.png" />
+                                    <img src="assets/smartGit.png" alt="programmers">
                                 </figure>
                             </div>
                             <div class="column is-half-desktop">
@@ -753,7 +754,7 @@
                         <div class="columns is-centered px-3">
                             <div class="column">
                                 <figure class="image is-2by1">
-                                    <img src="assets/versions.png" />
+                                    <img src="assets/versions.png" alt="programmers">
                                 </figure>
                             </div>
                             <div class="column is-half-desktop">
@@ -768,7 +769,7 @@
                         <div class="columns is-centered px-3">
                             <div class="column">
                                 <figure class="image is-2by1">
-                                    <img src="assets/tower.png" />
+                                    <img src="assets/tower.png" alt="programmers">
                                 </figure>
                             </div>
                             <div class="column is-half-desktop">
@@ -781,14 +782,81 @@
                                 </p>
                             </div>
                         </div>
+                        <table class="table is-striped is-hoverable is-bordered is-fullwidth">
+                            <thead>
+                              <tr>
+                                <th>Характеристика</th>
+                                <th>Git</th>
+                                <th>SVN (Subversion)</th>
+                                <th>Mercurial</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Модель</td>
+                                <td class="is-primary">Распределенная</td>
+                                <td class="is-info">Клиент-серверная</td>
+                                <td class="is-primary">Распределенная</td>
+                              </tr>
+                              <tr>
+                                <td>Скорость</td>
+                                <td class="is-primary">Высокая</td>
+                                <td class="is-warning">Средняя</td>
+                                <td class="is-primary">Высокая</td>
+                              </tr>
+                              <tr>
+                                <td>Работа с ветками</td>
+                                <td class="is-primary">Быстрая и дешевая</td>
+                                <td class="is-warning">Поддерживается, но дорогая</td>
+                                <td class="is-primary">Поддерживается</td>
+                              </tr>
+                              <tr>
+                                <td>Простота освоения</td>
+                                <td class="is-warning">Высокий порог вхождения</td>
+                                <td class="is-primary">Относительно простой</td>
+                                <td class="is-warning">Средний</td>
+                              </tr>
+                              <tr>
+                                <td>Работа оффлайн</td>
+                                <td class="is-primary">Полный функционал</td>
+                                <td class="is-warning">Ограниченный функционал</td>
+                                <td class="is-primary">Полный функционал</td>
+                              </tr>
+                              <tr>
+                                <td>Кроссплатформенность</td>
+                                <td class="is-primary">Linux, Windows, Mac</td>
+                                <td class="is-primary">Linux, Windows, Mac</td>
+                                <td class="is-primary">Linux, Windows, Mac</td>
+                              </tr>
+                              <tr>
+                                <td>Документация</td>
+                                <td class="is-warning">Обширная, но сложная</td>
+                                <td class="is-info">Обширная</td>
+                                <td class="is-primary">Подробная и удобная</td>
+                              </tr>
+                              <tr>
+                                <td>Лучшие случаи применения</td>
+                                <td class="is-primary">Open-source проекты, высокая скорость разработки</td>
+                                <td class="is-warning">Небольшие команды, централизованные проекты</td>
+                                <td class="is-warning">Применяется в качестве альтернативы GIT, для небольших проектов</td>
+                              </tr>
+                              <tr>
+                                <td>Популярность</td>
+                                <td class="is-primary">Очень высокая</td>
+                                <td class="is-warning">Низкая</td>
+                                <td class="is-warning">Низкая</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="section changeWidth">
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="box titleBg">
                 <div class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
@@ -809,12 +877,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container  px-6">
                 <div class="box titleBg">
                     <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile is-size-4-mobile has-text-primary-light"
@@ -822,7 +890,7 @@
                 </div>
 
                 <!-- cards -->
-                <section class="section">
+                <div class="section">
                     <div class="container">
                         <div class="columns is-centered is-8 is-variable is-multiline">
                             <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
@@ -839,12 +907,13 @@
                                 </div>
                             </div>
                         </div>
-                </section>
+                    </div>
+                </div>
                 <!-- Pagination -->
-                <section class="section">
+                <div class="section">
                     <div class="container" style="top: 50px;">
                         <div class="box paginationStyle">
-                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                            <nav class="pagination is-centered is-two-thirds" aria-label="pagination">
                                 <a href="#" class="pagination-previous">Назад</a>
                                 <a href="#" class="pagination-next">Вперед</a>
                                 <ul class="pagination-list">
@@ -859,10 +928,10 @@
                             </nav>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </section>
-    </section>
+        </div>
+    </div>
 
     <!-- Contact Modal -->
     <div class="modal" id="modal-1">
@@ -910,13 +979,13 @@
     <!-- Footer -->
     <footer class="footer has-background-link">
         <div class="content has-text-centered">
-            <section class="section changeWidth">
+            <div class="section changeWidth">
                 <div class="container">
                     <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права
                         защищены.
                     </p>
                 </div>
-            </section>
+            </div>
         </div>
     </footer>
 </body>

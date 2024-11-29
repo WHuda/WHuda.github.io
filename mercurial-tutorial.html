@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 <body class="bg">
     <header>
-        <section class="hero is-fullheight"
+        <div class="hero is-fullheight"
             style="background-image: url(assets/background.png); background-size: cover; height: 100vh;">
             <!-- navbar -->
             <nav class="navbar is-soft is-fixed-top has-background-link">
@@ -36,7 +36,7 @@
                             </span>
                             <span>Контактная информация</span>
                         </a>
-                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                        <a class="navbar-item is-size-5-desktop has-text-white my-3 is-size-5-mobile" id="about-link"
                             href="#">
                             <span class="icon is-small">
                                 <i class="fa-regular fa-address-card"></i>
@@ -45,14 +45,14 @@
                         </a>
                         <!-- Header-topic for mobile -->
                         <div class="container is-hidden-desktop">
-                            <h1 class="title is-size-1 has-text-primary-light">Содержание</h1>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <div class="title is-size-1 has-text-primary-light">Содержание</div>
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-1"
                                 href="#Topic-1">Установка</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-2"
                                 href="#Topic-2">Основы Mercurial</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-3"
                                 href="#Topic-3">Откаты, статусы</a>
-                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="about"
+                            <a class="navbar-item is-size-3-desktop has-text-white my-3 is-size-5-mobile" id="topic-4"
                                 href="#Topic-4">Источники</a>
                         </div>
                     </div>
@@ -67,11 +67,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </header>
 
     <!-- BreadCrumbs -->
-    <section class="section pb-0 changeWidth">
+    <div class="section pb-0 changeWidth">
         <div class="container">
             <nav class="breadcrumb is-justify-content-center is-flex title" aria-label="breadcrumbs">
                 <ul>
@@ -83,7 +83,7 @@
                 </ul>
             </nav>
         </div>
-    </section>
+    </div>
 
     <!-- side bar for desks/tablets -->
     <div class="is-widescreen is-hidden-touch is-desktop bg1">
@@ -93,7 +93,7 @@
                     Содержание
                 </p>
                 <ul class="menu-list is-size-5">
-                    <li><a class="is-active is-primary" class="has-background-white" href="#Topic-1">Установка</a>
+                    <li><a class="is-active is-primary" href="#Topic-1">Установка</a>
                     </li>
                     <li><a href="#Topic-2">Основы Mercurial</a></li>
                     <li><a href="#Topic-3">Откаты, статусы</a></li>
@@ -104,10 +104,11 @@
     </div>
 
     <!-- Content -->
-    <section class="section changeWidth">
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="box titleBg">
-                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-1">Установка
+                <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                    id="Topic-1">Установка
                 </h1>
                 <!-- Breadcrumb -->
                 <div class="box is-three-quarters has-background-link">
@@ -124,8 +125,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="icon is-small has-text-white"><i
-                                                class="fa-regular fa-clock"></i></i>
+                                        <span class="icon is-small has-text-white"><i class="fa-regular fa-clock"></i>
                                         </span>
                                         <span class="has-text-white">5 мин. чтения</span>
                                     </a>
@@ -143,7 +143,7 @@
                 </div>
             </div>
             <!-- Systems cards -->
-            <section class="section">
+            <div class="section">
                 <div class="container">
                     <div class="columns is-centered is-8 is-variable is-multiline">
                         <div class="column">
@@ -207,17 +207,18 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue6.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
-                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-2">Основы Mercurial
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-2">Основы Mercurial
                     </h1>
                 </div>
                 <div class="columns">
@@ -227,32 +228,29 @@
                                 Mercurial — это система контроля версий. Разработчики используют ее для
                                 администрирования
                                 исходного кода. У нее два основных назначения:
+                            </p>
                             <ol>
                                 <li>Она хранит все предыдущие версии каждого файла</li>
                                 <li>Она может объединить разные версии вашего кода, то есть сотрудники могут независимо
                                     работать над кодом и затем объединять свои изменения</li>
                             </ol>
-                            <div>Без Mercurial вы могли бы попытаться сохранить предыдущие версии,
+                            <p>Без Mercurial вы могли бы попытаться сохранить предыдущие версии,
                                 просто создавая много
-                                копий каталога с кодом:</div>
+                                копий каталога с кодом:
                             </p>
                         </div>
                     </div>
                 </div>
-                <section class="section pt-0 pb-0">
-
-                    <figure class="image is-2by1">
-                        <img src="assets/mercurial-image-1.png" />
-                    </figure>
-
-                </section>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justified is-size-6-mobile is-size-4-desktop">
+                    <figure class="image is-2by1">
+                        <img src="assets/mercurial-image-1.png" alt="programmers">
+                    </figure>
                     <div class="content mx-3 mt-5">
                         Это муторно, требует много места на диске и создает путаницу. Лучше использовать систему
                         контроля версий.
@@ -262,7 +260,7 @@
                     </div>
 
                     <figure class="image">
-                        <img src="assets/mercurial-image-2.png" />
+                        <img src="assets/mercurial-image-2.png" alt="programmers">
                     </figure>
 
                     <div class="content mx-3">
@@ -270,10 +268,11 @@
                             Если выполнить hg без параметров, то вы получите список наиболее часто используемых
                             команд. Вы можете также попробовать выполнить hg help для получения полного списка
                             команд.
-                        <div>Для того чтобы воспользоваться преимуществами контроля версий, вам
+                        </p>
+                        <p>Для того чтобы воспользоваться преимуществами контроля версий, вам
                             нужен репозиторий. Репозиторий хранит все предыдущие версии всех ваших файлов. На самом
                             деле, для экономии места на диске, все предыдущие версии не будут храниться — будет
-                            храниться только компактный список изменений.</div>
+                            храниться только компактный список изменений.
                         </p>
                     </div>
                     <div class="content mx-3">
@@ -285,7 +284,7 @@
                     </div>
 
                     <figure class="image">
-                        <img src="assets/mercurial-image-3.png" />
+                        <img src="assets/mercurial-image-3.png" alt="programmers">
                     </figure>
 
                     <div class="content mx-3">
@@ -293,7 +292,7 @@
                     </div>
 
                     <figure class="image">
-                        <img src="assets/mercurial-image-4.png" />
+                        <img src="assets/mercurial-image-4.png" alt="programmers">
                     </figure>
 
                     <div class="content mx-3">
@@ -318,7 +317,7 @@
                     </div>
 
                     <figure class="image pb-5">
-                        <img src="assets/mercurial-image-5.png" />
+                        <img src="assets/mercurial-image-5.png" alt="programmers">
                     </figure>
 
                     <div class="box has-background-link has-text-white ">
@@ -340,7 +339,7 @@
                     </div>
 
                     <figure class="image py-5 pb-0">
-                        <img src="assets/mercurial-image-6.png" />
+                        <img src="assets/mercurial-image-6.png" alt="programmers">
                     </figure>
 
                     <div class="content mx-3">
@@ -349,7 +348,7 @@
                     </div>
 
                     <figure class="image py-5">
-                        <img src="assets/mercurial-image-7.png" />
+                        <img src="assets/mercurial-image-7.png" alt="programmers">
                     </figure>
 
                     <div class="content mx-3">
@@ -362,7 +361,7 @@
                     </div>
 
                     <figure class="image py-5">
-                        <img src="assets/mercurial-image-8.png" />
+                        <img src="assets/mercurial-image-8.png" alt="programmers">
                     </figure>
                     <div class="box has-background-link has-text-white mx-3">
                         hg log
@@ -374,7 +373,7 @@
                     </div>
 
                     <figure class="image py-5">
-                        <img src="assets/mercurial-image-9.png" />
+                        <img src="assets/mercurial-image-9.png" alt="programmers">
                     </figure>
 
                     <div class="mx-3">
@@ -382,7 +381,7 @@
                     </div>
 
                     <figure class="image py-5">
-                        <img src="assets/mercurial-image-10.png" />
+                        <img src="assets/mercurial-image-10.png" alt="programmers">
                     </figure>
 
                     <div class="mx-3">
@@ -390,7 +389,7 @@
                     </div>
 
                     <figure class="image py-5">
-                        <img src="assets/mercurial-image-11.png" />
+                        <img src="assets/mercurial-image-11.png" alt="programmers">
                     </figure>
 
                     <div class="mx-3">
@@ -399,20 +398,22 @@
                     </div>
 
                     <figure class="image py-5">
-                        <img src="assets/mercurial-image-12.png" />
+                        <img src="assets/mercurial-image-12.png" alt="programmers">
                     </figure>
 
                 </div>
             </div>
-    </section>
+        </div>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue4.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container px-6">
                 <div class="box titleBg">
-                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-3">Откаты, статусы
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-3">Откаты, статусы
                     </h1>
                 </div>
                 <div class="columns">
@@ -425,7 +426,7 @@
                             </p>
 
                             <figure class="image py-5">
-                                <img src="assets/mercurial-image-13.png" />
+                                <img src="assets/mercurial-image-13.png" alt="programmers">
                             </figure>
 
                             <div class="box has-background-link has-text-white">
@@ -435,9 +436,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section class="section changeWidth">
+        </div>
+    </div>
+    <div class="section changeWidth">
         <div class="container px-6">
             <div class="columns">
                 <div class="column has-text-white has-text-justifie is-size-6-mobile is-size-4-desktop">
@@ -469,7 +470,7 @@
                         </div>
 
                         <figure class="image py-5">
-                            <img src="assets/mercurial-image-14.png" />
+                            <img src="assets/mercurial-image-14.png" alt="programmers">
                         </figure>
 
                         <div class="mx-3">
@@ -487,7 +488,7 @@
                         </div>
 
                         <figure class="image py-5">
-                            <img src="assets/mercurial-image-15.png" />
+                            <img src="assets/mercurial-image-15.png" alt="programmers">
                         </figure>
 
                         <div class="content mx-3">
@@ -503,7 +504,7 @@
                         </div>
 
                         <figure class="image py-5">
-                            <img src="assets/mercurial-image-16.png" />
+                            <img src="assets/mercurial-image-16.png" alt="programmers">
                         </figure>
 
                         <div class="mx-3">
@@ -514,7 +515,7 @@
                         </div>
 
                         <figure class="image py-5">
-                            <img src="assets/mercurial-image-17.png" />
+                            <img src="assets/mercurial-image-17.png" alt="programmers">
                         </figure>
 
                         <div class="mx-3">
@@ -524,13 +525,9 @@
                             <br><br>
                             Разобравшись с вопросиками и восклицательными знаками, я могу продолжить и внести изменения:
                         </div>
-                        <section class="section pt-0 pb-0">
-                            <section class="section pt-0 pb-0">
-                                <figure class="image py-5">
-                                    <img src="assets/mercurial-image-18.png" />
-                                </figure>
-                            </section>
-                        </section>
+                        <figure class="image py-5">
+                            <img src="assets/mercurial-image-18.png" alt="programmers">
+                        </figure>
                         <p class="mx-3">
                             На что еще стоит обратить внимание в выводе hg log: строка changeset отображает номер
                             каждого коммита. На самом деле даже два номера: короткий удобный вроде «0» для первой
@@ -545,7 +542,7 @@
                         </p>
 
                         <figure class="image py-5">
-                            <img src="assets/mercurial-image-19.png" />
+                            <img src="assets/mercurial-image-19.png" alt="programmers">
                         </figure>
 
                         <div class="box has-background-link has-text-white">
@@ -561,7 +558,7 @@
                         </div>
 
                         <figure class="image py-5">
-                            <img src="assets/mercurial-image-20.png" />
+                            <img src="assets/mercurial-image-20.png" alt="programmers">
                         </figure>
 
                         <div class="mx-3">
@@ -571,7 +568,7 @@
                         </div>
 
                         <figure class="image py-5">
-                            <img src="assets/mercurial-image-21.png" />
+                            <img src="assets/mercurial-image-21.png" alt="programmers">
                         </figure>
 
                         <div class="mx-3">
@@ -586,7 +583,7 @@
                         </div>
 
                         <figure class="image py-5">
-                            <img src="assets/mercurial-image-22.png" />
+                            <img src="assets/mercurial-image-22.png" alt="programmers">
                         </figure>
 
                         <div class="box has-background-link has-text-white">
@@ -618,19 +615,20 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Topic -->
-    <section class="hero is-fullheight"
+    <div class="hero is-fullheight"
         style="background-image: url(assets/blue3.jpg); background-size: cover; height: 100vh;">
-        <section class="section changeWidth">
+        <div class="section changeWidth">
             <div class="container  px-6">
                 <div class="box titleBg">
-                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light" id="Topic-4">Источники</h1>
+                    <h1 class="title has-text-centered is-size-1-desktop is-size-4-mobile has-text-primary-light"
+                        id="Topic-4">Источники</h1>
                 </div>
 
                 <!-- cards -->
-                <section class="section">
+                <div class="section">
                     <div class="container">
                         <div class="columns is-centered is-8 is-variable is-multiline">
                             <div class="column is-8-tablet is-6-desktop is-size-6-mobile is-size-4-desktop">
@@ -652,12 +650,13 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+
                 <!-- Pagination -->
-                <section class="section">
+                <div class="section">
                     <div class="container" style="top: 50px;">
                         <div class="box paginationStyle">
-                            <nav class="pagination is-centered is-two-thirds" role="navigation" aria-label="pagination">
+                            <nav class="pagination is-centered is-two-thirds" aria-label="pagination">
                                 <a href="mercurial.html" class="pagination-previous">Назад</a>
                                 <a href="comparison.html" class="pagination-next">Вперед</a>
                                 <ul class="pagination-list">
@@ -666,19 +665,18 @@
                                     <li><a href="mercurial.html" class="pagination-link" aria-label="Goto page 45">6</a>
                                     </li>
                                     <li><a href="mercurial-tutorial.html" class="pagination-link is-current"
-                                            aria-label="Goto page 47">7</a>
+                                            aria-label="Goto page 47">7</a></li>
                                     <li><a href="comparison.html" class="pagination-link"
                                             aria-label="Goto page 45">8</a>
-                                    </li>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </section>
-    </section>
+        </div>
+    </div>
 
     <!-- Contact Modal -->
     <div class="modal" id="modal-1">
@@ -708,7 +706,8 @@
         <div class="modal-background" id="about-bg"></div>
         <div class="modal-content bg py-5 px-5">
             <h3 class="title mb-6 is-size-1">О нас</h3>
-            <p class="is-size-4 has-text-justified has-text-white">Данный сайт был создан с целью публикации информации на различные темы.
+            <p class="is-size-4 has-text-justified has-text-white">Данный сайт был создан с целью публикации информации
+                на различные темы.
                 Здесь вы можете
                 найти полезные
                 статьи, советы и рекомендации по самым разнообразным вопросам. Наша цель - делиться знаниями и помогать
@@ -722,12 +721,12 @@
     <!-- Footer -->
     <footer class="footer has-background-link">
         <div class="content has-text-centered">
-            <section class="section changeWidth">
+            <div class="section changeWidth">
                 <div class="container">
                     <p class="is-size-5 title has-text-centered"> <strong>Copyright</strong> © 2024 Все права защищены.
                     </p>
                 </div>
-            </section>
+            </div>
         </div>
     </footer>
 </body>
